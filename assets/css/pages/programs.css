@@ -1,0 +1,727 @@
+/* ==========================================================
+   assets/css/pages/programs.css
+   Kipaji Spark — Programs Page Specific Styles
+   ========================================================== */
+
+/* ------------------------------------------------
+   1. Programs Page Base / Shell
+   ------------------------------------------------ */
+.programs-page {
+  background-color: #FFFFFF;
+}
+
+/* ------------------------------------------------
+   2. Programs Hero Section
+   ------------------------------------------------ */
+.programs-hero {
+  background: linear-gradient(180deg, #F8F7FC 0%, #FFFFFF 100%);
+  padding: 100px 0 80px;
+  border-bottom: 1px solid rgba(46, 16, 101, 0.06);
+}
+
+.programs-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.programs-hero-content {
+  max-width: 540px;
+}
+
+.programs-hero-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.programs-hero-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.programs-hero-content .section-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 32px;
+}
+
+.programs-hero-content .hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Programs Hero Image */
+.programs-hero-image-wrapper {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.programs-hero-image-wrapper img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: 28px;
+  transition: transform 0.5s ease;
+}
+
+.programs-hero-image-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+.programs-hero-image-wrapper .deco-purple-blob {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(91, 33, 182, 0.15) 0%, transparent 70%);
+  bottom: -40px;
+  right: -40px;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+/* ------------------------------------------------
+   3. Programs Overview / Intro Section
+   ------------------------------------------------ */
+.programs-overview-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.programs-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.programs-overview-content {
+  max-width: 560px;
+}
+
+.programs-overview-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.programs-overview-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1.25;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.programs-overview-content .section-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 16px;
+}
+
+/* Overview Focus Side Card */
+.overview-focus-card {
+  background: #F8F7FC;
+  border-radius: 24px;
+  padding: 36px 32px;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 8px 25px rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overview-focus-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(46, 16, 101, 0.06);
+}
+
+.overview-focus-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.focus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.focus-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #1E1B2E;
+  font-weight: 500;
+}
+
+.focus-icon {
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ------------------------------------------------
+   4. Featured Programs Grid Section
+   ------------------------------------------------ */
+.programs-grid-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.programs-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* 5 cards: first row 3, second row 2 centered */
+.programs-card-grid article:nth-child(4),
+.programs-card-grid article:nth-child(5) {
+  grid-column: span 1;
+}
+
+/* Program Card Styling */
+.program-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 36px 28px;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 8px 25px rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(46, 16, 101, 0.08);
+}
+
+.program-card-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #EEE9FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #2E1065;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.program-card:hover .program-card-icon-wrapper {
+  background: #2E1065;
+  color: #FFFFFF;
+}
+
+.program-card-svg {
+  width: 28px;
+  height: 28px;
+}
+
+.program-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #1E1B2E;
+  margin-bottom: 12px;
+}
+
+.program-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #5F6473;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.program-card-link {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2E1065;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.program-card-link:hover {
+  color: #F4B400;
+  transform: translateX(4px);
+}
+
+/* ------------------------------------------------
+   5. Program Spotlight Sections
+   ------------------------------------------------ */
+.program-spotlight-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.program-spotlight-section.bg-light {
+  background: #F8F7FC;
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Reverse layout for alternating sections */
+.spotlight-grid.reverse .spotlight-image {
+  order: 2;
+}
+.spotlight-grid.reverse .spotlight-content {
+  order: 1;
+}
+
+.spotlight-content {
+  max-width: 540px;
+}
+
+.spotlight-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.spotlight-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1.25;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.spotlight-content .section-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 16px;
+}
+
+/* Spotlight Gains / Benefits List */
+.spotlight-gains {
+  margin-top: 24px;
+  padding: 24px 28px;
+  background: #F8F7FC;
+  border-radius: 18px;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+}
+
+.spotlight-gains h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2E1065;
+  margin-bottom: 14px;
+}
+
+.spotlight-gains ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spotlight-gains ul li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #1E1B2E;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.spotlight-gains ul li::before {
+  content: '•';
+  position: absolute;
+  left: 4px;
+  top: 0;
+  color: #F4B400;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Spotlight Image */
+.spotlight-image img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease;
+}
+
+.spotlight-image img:hover {
+  transform: scale(1.01);
+}
+
+/* ------------------------------------------------
+   6. Program Journey / Growth Pathway Section
+   ------------------------------------------------ */
+.growth-pathway-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.pathway-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px 20px;
+  text-align: center;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pathway-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+}
+
+.pathway-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #2E1065;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  transition: background 0.3s ease;
+}
+
+.pathway-card:hover .pathway-number {
+  background: #F4B400;
+  color: #1E1B2E;
+}
+
+.pathway-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1E1B2E;
+  margin-bottom: 8px;
+}
+
+.pathway-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   7. Program Outcomes / Impact Section
+   ------------------------------------------------ */
+.outcomes-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.outcome-card {
+  background: #F8F7FC;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.outcome-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+  background: #FFFFFF;
+}
+
+.outcome-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.outcome-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1E1B2E;
+  margin-bottom: 10px;
+}
+
+.outcome-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   8. Participation / Partnership Section
+   ------------------------------------------------ */
+.participate-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.participate-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.participate-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px 22px;
+  text-align: center;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.participate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+}
+
+.participate-icon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.participate-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1E1B2E;
+  margin-bottom: 10px;
+}
+
+.participate-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   9. CTA Banner Spacing (Local Adjustment)
+   ------------------------------------------------ */
+.cta-banner-section {
+  margin-top: 0;
+}
+
+/* ------------------------------------------------
+   10. Programs Page Specific Responsive Rules
+   ------------------------------------------------ */
+
+/* Large Desktop / Laptop */
+@media (max-width: 1200px) {
+  .programs-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .programs-card-grid article:nth-child(4),
+  .programs-card-grid article:nth-child(5) {
+    grid-column: span 1;
+  }
+  .pathway-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .participate-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  .programs-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .programs-hero-content {
+    max-width: 100%;
+  }
+  .programs-hero-image-wrapper img {
+    height: 400px;
+  }
+  .programs-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .programs-overview-content {
+    max-width: 100%;
+  }
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .spotlight-grid.reverse .spotlight-image {
+    order: -1;
+  }
+  .spotlight-grid.reverse .spotlight-content {
+    order: 1;
+  }
+  .spotlight-image img {
+    height: 380px;
+  }
+  .spotlight-content {
+    max-width: 100%;
+  }
+  .outcomes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .programs-hero {
+    padding: 80px 0 60px;
+  }
+  .programs-hero-image-wrapper img {
+    height: 340px;
+  }
+  .programs-card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .pathway-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .outcomes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .participate-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .programs-overview-section,
+  .programs-grid-section,
+  .program-spotlight-section,
+  .growth-pathway-section,
+  .outcomes-section,
+  .participate-section {
+    padding: 60px 0;
+  }
+  .program-card {
+    padding: 28px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .programs-hero-content .section-title {
+    font-size: 1.8rem;
+  }
+  .programs-hero-content .hero-actions {
+    flex-direction: column;
+  }
+  .programs-hero-content .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .programs-hero-image-wrapper img {
+    height: 260px;
+    border-radius: 20px;
+  }
+  .programs-card-grid {
+    grid-template-columns: 1fr;
+  }
+  .spotlight-image img {
+    height: 260px;
+    border-radius: 20px;
+  }
+  .spotlight-gains {
+    padding: 20px 18px;
+  }
+  .pathway-grid {
+    grid-template-columns: 1fr;
+  }
+  .outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+  .participate-grid {
+    grid-template-columns: 1fr;
+  }
+  .overview-focus-card {
+    padding: 24px 20px;
+  }
+}

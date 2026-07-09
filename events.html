@@ -1,0 +1,561 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events — Kipaji Spark | Showcases, Workshops & Youth Experiences</title>
+    
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Main Global Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="assets/css/pages/events.css" />
+    
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- HEADER / NAVIGATION (Shared System)           -->
+    <!-- ============================================ -->
+    <header class="site-header" id="site-header">
+        <div class="container header-container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/logo/logo.png" alt="KIPAJI SPARK Logo" class="logo-icon">
+                    <span class="logo-text">Kipaji <span class="logo-highlight">Spark</span></span>
+                </a>
+            </div>
+
+            <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link active">Events</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="donate.html" class="btn btn-primary btn-donate">Donate</a>
+            </nav>
+
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="events-page">
+        <!-- ============================================ -->
+        <!-- 1) EVENTS PAGE HERO SECTION                   -->
+        <!-- ============================================ -->
+        <section class="page-hero events-hero">
+            <div class="container">
+                <div class="events-hero-grid">
+                    <div class="events-hero-content reveal fade-up">
+                        <span class="section-eyebrow">Events &amp; Experiences</span>
+                        <h1 class="section-title">Events that celebrate talent, build confidence, and bring young people into inspiring spaces</h1>
+                        <p class="section-desc">
+                            Kipaji Spark organizes showcases, workshops, competitions, mentorship experiences, outreach gatherings, 
+                            and youth-centered events that help children and young people grow in creativity, confidence, leadership, 
+                            and visibility.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="contact.html" class="btn btn-primary btn-large">Join an Event</a>
+                            <a href="contact.html" class="btn btn-outline btn-large">Partner With Us</a>
+                        </div>
+                    </div>
+                    <div class="events-hero-image reveal fade-up">
+                        <div class="events-hero-image-wrapper">
+                            <img src="assets/images/events/events-hero.jpg" alt="Young performers on stage at a vibrant Kipaji Spark event celebrating youth talent" />
+                            <div class="deco-shape deco-purple-blob"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 2) EVENTS OVERVIEW / INTRO SECTION            -->
+        <!-- ============================================ -->
+        <section class="events-overview-section section">
+            <div class="container">
+                <div class="events-overview-grid">
+                    <div class="events-overview-content reveal fade-left">
+                        <span class="section-eyebrow">Why We Host Events</span>
+                        <h2 class="section-title">Creating spaces where talent is seen, nurtured, and celebrated</h2>
+                        <p class="section-desc">
+                            Kipaji Spark events are not just gatherings — they are intentional experiences that help children and youth 
+                            express themselves publicly, gain confidence, connect with mentors and peers, learn through workshops 
+                            and performance opportunities, and access supportive community spaces.
+                        </p>
+                        <p class="section-desc">
+                            Every event is designed to turn hidden talent into visible growth and to give young people the stage, 
+                            the skills, and the encouragement they deserve.
+                        </p>
+                    </div>
+                    <div class="events-overview-sidecard reveal fade-right">
+                        <div class="overview-focus-card">
+                            <h4>What our events create</h4>
+                            <ul class="focus-list">
+                                <li><span class="focus-icon">🎤</span> Confidence through performance</li>
+                                <li><span class="focus-icon">🌟</span> Exposure and visibility</li>
+                                <li><span class="focus-icon">🤝</span> Mentorship and inspiration</li>
+                                <li><span class="focus-icon">🎨</span> Creative expression</li>
+                                <li><span class="focus-icon">🌍</span> Community connection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 3) FEATURED / UPCOMING EVENTS SECTION         -->
+        <!-- ============================================ -->
+        <section class="featured-events-section section bg-light">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Upcoming &amp; Signature Events</span>
+                    <h2 class="section-title">Join the experiences that shape young talent</h2>
+                    <p class="section-subtitle">Explore some of the event experiences Kipaji Spark offers throughout the year for children, youth, schools, and communities.</p>
+                </div>
+                <div class="featured-events-grid">
+                    <!-- Event Card 1 -->
+                    <article class="event-card reveal fade-up">
+                        <div class="event-card-image">
+                            <img src="assets/images/events/arusha-got-talent-event.jpg" alt="Excited young performers at the Arusha's Got Talent showcase event" />
+                            <span class="event-badge">Flagship Event</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h3 class="event-card-title">Arusha's Got Talent Showcase</h3>
+                            <p class="event-card-desc">Our signature talent competition and celebration event where children and youth from schools and communities perform, shine, and gain recognition.</p>
+                            <div class="event-meta">
+                                <span class="event-meta-item">🎯 Talent Showcase</span>
+                                <span class="event-meta-item">👥 Youth &amp; Schools</span>
+                                <span class="event-meta-item">📅 Annual Event</span>
+                            </div>
+                            <a href="contact.html" class="event-card-link">Learn More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 2 -->
+                    <article class="event-card reveal fade-up">
+                        <div class="event-card-image">
+                            <img src="assets/images/events/workshop-session.jpg" alt="Children participating in a creative workshop session at a Kipaji Spark event" />
+                            <span class="event-badge">Workshop Series</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h3 class="event-card-title">Youth Talent Workshop Day</h3>
+                            <p class="event-card-desc">Interactive workshop experiences where children explore singing, dancing, public speaking, and creative arts with mentors and coaches.</p>
+                            <div class="event-meta">
+                                <span class="event-meta-item">🎨 Creative Workshop</span>
+                                <span class="event-meta-item">🧒 Children &amp; Youth</span>
+                                <span class="event-meta-item">📅 Coming Soon</span>
+                            </div>
+                            <a href="contact.html" class="event-card-link">Learn More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 3 -->
+                    <article class="event-card reveal fade-up">
+                        <div class="event-card-image">
+                            <img src="assets/images/events/leadership-bootcamp.jpg" alt="Youth engaged in a leadership and life skills bootcamp session" />
+                            <span class="event-badge">Leadership Experience</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h3 class="event-card-title">Leadership &amp; Life Skills Bootcamp</h3>
+                            <p class="event-card-desc">A focused event experience that builds communication, leadership confidence, financial literacy, and personal development in young participants.</p>
+                            <div class="event-meta">
+                                <span class="event-meta-item">🧠 Leadership</span>
+                                <span class="event-meta-item">👥 Youth Groups</span>
+                                <span class="event-meta-item">📅 Coming Soon</span>
+                            </div>
+                            <a href="contact.html" class="event-card-link">Learn More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 4 -->
+                    <article class="event-card reveal fade-up">
+                        <div class="event-card-image">
+                            <img src="assets/images/events/kids-performance-day.jpg" alt="Young children performing creatively at a Kids Performance Day event" />
+                            <span class="event-badge">Performance Day</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h3 class="event-card-title">Kids Creative Performance Day</h3>
+                            <p class="event-card-desc">A joyful celebration event where younger children showcase their talents in a supportive, family-friendly environment filled with encouragement and fun.</p>
+                            <div class="event-meta">
+                                <span class="event-meta-item">🎤 Performance</span>
+                                <span class="event-meta-item">👶 Young Children</span>
+                                <span class="event-meta-item">📅 Annual Event</span>
+                            </div>
+                            <a href="contact.html" class="event-card-link">Learn More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 5 -->
+                    <article class="event-card reveal fade-up">
+                        <div class="event-card-image">
+                            <img src="assets/images/events/community-outreach-event.jpg" alt="Kipaji Spark team engaging with school children during a community outreach event" />
+                            <span class="event-badge">Community Outreach</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h3 class="event-card-title">School Talent Outreach Session</h3>
+                            <p class="event-card-desc">Outreach events that bring talent discovery, mentorship, and creative inspiration directly into schools and community spaces across the region.</p>
+                            <div class="event-meta">
+                                <span class="event-meta-item">🏫 Schools</span>
+                                <span class="event-meta-item">🌍 Community</span>
+                                <span class="event-meta-item">📅 Ongoing</span>
+                            </div>
+                            <a href="contact.html" class="event-card-link">Learn More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Event Card 6 -->
+                    <article class="event-card reveal fade-up">
+                        <div class="event-card-image">
+                            <img src="assets/images/events/mentorship-gathering.jpg" alt="Mentors and youth connecting during a mentorship and inspiration gathering" />
+                            <span class="event-badge">Mentorship Gathering</span>
+                        </div>
+                        <div class="event-card-body">
+                            <h3 class="event-card-title">Mentorship &amp; Inspiration Gathering</h3>
+                            <p class="event-card-desc">An intimate event experience connecting young people with mentors, role models, and inspiring voices to spark motivation and share guidance.</p>
+                            <div class="event-meta">
+                                <span class="event-meta-item">🤝 Mentorship</span>
+                                <span class="event-meta-item">👥 Youth &amp; Mentors</span>
+                                <span class="event-meta-item">📅 Coming Soon</span>
+                            </div>
+                            <a href="contact.html" class="event-card-link">Learn More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 4) SIGNATURE EVENT EXPERIENCES SECTION        -->
+        <!-- ============================================ -->
+        <section class="signature-experiences-section section">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Signature Experiences</span>
+                    <h2 class="section-title">Events that define the Kipaji Spark journey</h2>
+                </div>
+                <div class="signature-experiences-grid">
+                    <!-- Experience 1 -->
+                    <div class="signature-experience-card reveal fade-up">
+                        <div class="signature-image">
+                            <img src="assets/images/events/arusha-got-talent-event.jpg" alt="Arusha's Got Talent flagship event stage with young performers" />
+                        </div>
+                        <div class="signature-content">
+                            <span class="section-eyebrow">Flagship Event</span>
+                            <h3>Arusha's Got Talent</h3>
+                            <p>Our most celebrated event experience — a talent competition and showcase that gives children and youth a stage to perform, be seen, and gain confidence in front of their community. This event brings together schools, families, mentors, and partners to celebrate young talent in a powerful way.</p>
+                            <ul class="signature-list">
+                                <li>Live performances and talent showcases</li>
+                                <li>School and community participation</li>
+                                <li>Recognition, visibility, and celebration</li>
+                                <li>Confidence-building through public performance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="signature-experience-card reverse reveal fade-up">
+                        <div class="signature-image">
+                            <img src="assets/images/events/workshop-session.jpg" alt="Young participants engaged in a talent workshop session" />
+                        </div>
+                        <div class="signature-content">
+                            <span class="section-eyebrow">Workshop Series</span>
+                            <h3>Talent Workshops &amp; Mentorship Sessions</h3>
+                            <p>Interactive, hands-on event experiences where children and youth learn directly from mentors, coaches, and creative professionals. These sessions are designed to build skills, spark creativity, and provide guided practice in a supportive environment.</p>
+                            <ul class="signature-list">
+                                <li>Skill-building through guided practice</li>
+                                <li>Direct access to mentors and coaches</li>
+                                <li>Creative exploration in a safe space</li>
+                                <li>Peer connection and collaboration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="signature-experience-card reveal fade-up">
+                        <div class="signature-image">
+                            <img src="assets/images/events/community-outreach-event.jpg" alt="Kipaji Spark community outreach event with children and families" />
+                        </div>
+                        <div class="signature-content">
+                            <span class="section-eyebrow">Community Experience</span>
+                            <h3>Community Outreach &amp; Youth Gatherings</h3>
+                            <p>Events that bring the Kipaji Spark experience beyond our walls — into schools, neighborhoods, and community spaces. These gatherings are about expanding access, building supportive ecosystems, and ensuring that more children and youth can experience the joy and growth of talent-centered events.</p>
+                            <ul class="signature-list">
+                                <li>Outreach to schools and communities</li>
+                                <li>Family and stakeholder engagement</li>
+                                <li>Accessible creative and performance experiences</li>
+                                <li>Building local support networks for youth talent</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 5) EVENT CATEGORIES / EVENT TYPES SECTION     -->
+        <!-- ============================================ -->
+        <section class="event-categories-section section bg-light">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Event Types</span>
+                    <h2 class="section-title">Different experiences for different stages of growth</h2>
+                </div>
+                <div class="event-categories-grid">
+                    <div class="category-card reveal fade-up">
+                        <div class="category-icon">🌟</div>
+                        <h4>Talent Showcases</h4>
+                        <p>Performance events that give young talent a stage to shine and be celebrated by their community.</p>
+                    </div>
+                    <div class="category-card reveal fade-up">
+                        <div class="category-icon">🏆</div>
+                        <h4>Competitions &amp; Performance Events</h4>
+                        <p>Structured competitions that build confidence, healthy ambition, and public performance skills.</p>
+                    </div>
+                    <div class="category-card reveal fade-up">
+                        <div class="category-icon">🤝</div>
+                        <h4>Mentorship Sessions</h4>
+                        <p>Guided gatherings where young people connect with mentors who inspire, coach, and encourage them.</p>
+                    </div>
+                    <div class="category-card reveal fade-up">
+                        <div class="category-icon">🎨</div>
+                        <h4>Creative Workshops</h4>
+                        <p>Hands-on learning experiences focused on singing, dancing, acting, public speaking, and creative arts.</p>
+                    </div>
+                    <div class="category-card reveal fade-up">
+                        <div class="category-icon">🧠</div>
+                        <h4>Leadership &amp; Life Skills Events</h4>
+                        <p>Interactive sessions that develop communication, leadership, financial literacy, and personal growth.</p>
+                    </div>
+                    <div class="category-card reveal fade-up">
+                        <div class="category-icon">🌍</div>
+                        <h4>Community Outreach Events</h4>
+                        <p>Events that bring talent development experiences into schools and communities across the region.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 6) WHY OUR EVENTS MATTER / EVENT IMPACT       -->
+        <!-- ============================================ -->
+        <section class="event-impact-section section">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Event Impact</span>
+                    <h2 class="section-title">Why our events matter for children and youth</h2>
+                </div>
+                <div class="event-impact-grid">
+                    <div class="impact-card reveal fade-up">
+                        <div class="impact-icon">🎤</div>
+                        <h4>Confidence in Self-Expression</h4>
+                        <p>Events give young people the courage to express themselves publicly and share their gifts with the world.</p>
+                    </div>
+                    <div class="impact-card reveal fade-up">
+                        <div class="impact-icon">💪</div>
+                        <h4>Courage to Perform and Be Seen</h4>
+                        <p>Stepping onto a stage builds resilience, self-belief, and the ability to show up with confidence.</p>
+                    </div>
+                    <div class="impact-card reveal fade-up">
+                        <div class="impact-icon">🤲</div>
+                        <h4>Mentorship and Inspiration</h4>
+                        <p>Events connect young people with mentors, role models, and inspiring voices that shape their journey.</p>
+                    </div>
+                    <div class="impact-card reveal fade-up">
+                        <div class="impact-icon">🤝</div>
+                        <h4>Teamwork and Social Connection</h4>
+                        <p>Through shared experiences, children and youth build friendships, collaboration skills, and a sense of belonging.</p>
+                    </div>
+                    <div class="impact-card reveal fade-up">
+                        <div class="impact-icon">🧠</div>
+                        <h4>Leadership and Communication Growth</h4>
+                        <p>Every event is an opportunity to practice leadership, speaking, and interpersonal skills in real settings.</p>
+                    </div>
+                    <div class="impact-card reveal fade-up">
+                        <div class="impact-icon">🌟</div>
+                        <h4>Visibility, Opportunity, and Positive Identity</h4>
+                        <p>Events help young people be seen, celebrated, and recognized — building a positive sense of who they are and what they can become.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 7) PARTICIPATION / PARTNERSHIP SECTION        -->
+        <!-- ============================================ -->
+        <section class="participate-section section bg-light">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Get Involved</span>
+                    <h2 class="section-title">Ways to participate, support, and partner</h2>
+                </div>
+                <div class="participate-grid">
+                    <div class="participate-card reveal fade-up">
+                        <div class="participate-icon">🧒</div>
+                        <h4>For Children &amp; Youth</h4>
+                        <p>Join events that help you express your talent, build confidence, and connect with mentors and peers who believe in you.</p>
+                    </div>
+                    <div class="participate-card reveal fade-up">
+                        <div class="participate-icon">👨‍👩‍👧‍👦</div>
+                        <h4>For Parents &amp; Families</h4>
+                        <p>Support your child's growth by engaging with events that nurture their gifts in safe, inspiring environments.</p>
+                    </div>
+                    <div class="participate-card reveal fade-up">
+                        <div class="participate-icon">🏫</div>
+                        <h4>For Schools &amp; Communities</h4>
+                        <p>Partner with us to bring talent showcases, workshops, and mentorship events into your school or community space.</p>
+                    </div>
+                    <div class="participate-card reveal fade-up">
+                        <div class="participate-icon">💛</div>
+                        <h4>For Mentors, Sponsors &amp; Partners</h4>
+                        <p>Help us expand the reach and impact of Kipaji Spark events by contributing your time, resources, or expertise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 8) EVENT HIGHLIGHTS STRIP                     -->
+        <!-- ============================================ -->
+        <section class="event-highlights-strip section">
+            <div class="container reveal fade-up">
+                <div class="highlights-strip">
+                    <span class="highlight-pill">🎤 Live Performances</span>
+                    <span class="highlight-pill">🎨 Workshops</span>
+                    <span class="highlight-pill">🤝 Mentorship Sessions</span>
+                    <span class="highlight-pill">🏫 School Outreach</span>
+                    <span class="highlight-pill">🧠 Leadership Experiences</span>
+                    <span class="highlight-pill">🌟 Community Showcases</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 9) CTA BANNER SECTION (Shared System)         -->
+        <!-- ============================================ -->
+        <section class="cta-banner-section">
+            <div class="container cta-banner-container reveal fade-up">
+                <div class="cta-banner-content">
+                    <h2 class="cta-banner-title">Help create spaces where young talent can be seen and celebrated</h2>
+                    <p class="cta-banner-desc">
+                        Whether you're a parent, school, mentor, partner, or supporter, you can help bring inspiring events 
+                        to more children and youth through Kipaji Spark.
+                    </p>
+                    <div class="cta-banner-actions">
+                        <a href="contact.html" class="btn btn-primary btn-large">Get Involved</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-large">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- FOOTER (Shared System, identical to Home)     -->
+    <!-- ============================================ -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-column footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/images/logo/logo.png" alt="KIPAJI SPARK Logo" class="logo-icon">
+                    <span class="logo-text">Kipaji <span class="logo-highlight">Spark</span></span>
+                </div>
+                <p class="footer-tagline">My talent my wings.</p>
+                <p class="footer-desc">Discovering, nurturing, and empowering children and youth through arts, creativity, and life skills across Tanzania and Africa.</p>
+                <div class="footer-socials">
+                    <a href="https://facebook.com/kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on Facebook" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on Instagram" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on Twitter" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to KIPAJI SPARK on YouTube" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/company/kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on LinkedIn" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">Our Programs</h4>
+                <ul class="footer-links">
+                    <li><a href="programs.html">Arusha Kids</a></li>
+                    <li><a href="programs.html">Arusha's Got Talent</a></li>
+                    <li><a href="programs.html">Talent Training</a></li>
+                    <li><a href="programs.html">Leadership &amp; Life Skills</a></li>
+                    <li><a href="programs.html">Community Outreach</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">Get in Touch</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-icon"><path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" /></svg>
+                        <span>Arusha, Tanzania</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-icon"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" /></svg>
+                        <span>+255 123 456 789</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-icon"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" /><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" /></svg>
+                        <span>info@kipajispark.org</span>
+                    </li>
+                </ul>
+                <div class="footer-newsletter">
+                    <label for="newsletter-email">Subscribe for updates</label>
+                    <div class="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Your email" />
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Kipaji Spark. All rights reserved. My talent my wings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT                                    -->
+    <!-- ============================================ -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/pages/events.js"></script>
+</body>
+</html>

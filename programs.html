@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programs — Kipaji Spark | Talent, Leadership & Growth</title>
+    
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Main Global Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="assets/css/pages/programs.css" />
+    
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- HEADER / NAVIGATION (Shared System)           -->
+    <!-- ============================================ -->
+    <header class="site-header" id="site-header">
+        <div class="container header-container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/logo/logo.png" alt="KIPAJI SPARK Logo" class="logo-icon">
+                    <span class="logo-text">Kipaji <span class="logo-highlight">Spark</span></span>
+                </a>
+            </div>
+
+            <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="programs.html" class="nav-link active">Programs</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="donate.html" class="btn btn-primary btn-donate">Donate</a>
+            </nav>
+
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="programs-page">
+        <!-- ============================================ -->
+        <!-- 1) PROGRAMS PAGE HERO SECTION                 -->
+        <!-- ============================================ -->
+        <section class="page-hero programs-hero">
+            <div class="container">
+                <div class="programs-hero-grid">
+                    <div class="programs-hero-content reveal fade-up">
+                        <span class="section-eyebrow">Our Programs</span>
+                        <h1 class="section-title">Programs that help young talent grow with confidence, creativity, and purpose</h1>
+                        <p class="section-desc">
+                            Kipaji Spark's initiatives are designed to discover talent, nurture ability, build leadership and life skills, 
+                            create exposure opportunities, and connect children and youth to mentorship and growth platforms.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="contact.html" class="btn btn-primary btn-large">Get Involved</a>
+                            <a href="contact.html" class="btn btn-outline btn-large">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="programs-hero-image reveal fade-up">
+                        <div class="programs-hero-image-wrapper">
+                            <img src="assets/images/programs/programs-hero.jpg" alt="Children and youth actively participating in a Kipaji Spark creative program" />
+                            <div class="deco-shape deco-purple-blob"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 2) PROGRAMS OVERVIEW / INTRO SECTION          -->
+        <!-- ============================================ -->
+        <section class="programs-overview-section section">
+            <div class="container">
+                <div class="programs-overview-grid">
+                    <div class="programs-overview-content reveal fade-left">
+                        <span class="section-eyebrow">What We Offer</span>
+                        <h2 class="section-title">A connected ecosystem of learning, talent development, and opportunity</h2>
+                        <p class="section-desc">
+                            Kipaji Spark's programs are not isolated activities — they are a connected pathway designed to help children 
+                            and youth discover their gifts, build confidence, learn leadership and life skills, access mentorship, 
+                            and find platforms where their talents can grow into meaningful opportunity.
+                        </p>
+                        <p class="section-desc">
+                            Whether a child is stepping onto a stage for the first time, developing communication skills, 
+                            or connecting with mentors who believe in their potential, every program is built to nurture 
+                            the whole young person.
+                        </p>
+                    </div>
+                    <div class="programs-overview-sidecard reveal fade-right">
+                        <div class="overview-focus-card">
+                            <h4>What our programs focus on</h4>
+                            <ul class="focus-list">
+                                <li><span class="focus-icon">✨</span> Talent discovery</li>
+                                <li><span class="focus-icon">🤝</span> Mentorship and coaching</li>
+                                <li><span class="focus-icon">🧠</span> Leadership and confidence</li>
+                                <li><span class="focus-icon">🎨</span> Creativity and self-expression</li>
+                                <li><span class="focus-icon">🌍</span> Community connection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 3) MAIN PROGRAMS GRID / FEATURED CARDS        -->
+        <!-- ============================================ -->
+        <section class="programs-grid-section section bg-light">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Our Core Programs</span>
+                    <h2 class="section-title">Five pathways for talent, leadership, and growth</h2>
+                    <p class="section-subtitle">Explore the flagship programs that form the heart of Kipaji Spark's work with children and youth.</p>
+                </div>
+                <div class="programs-card-grid">
+                    <!-- Program 1: Arusha Kids -->
+                    <article class="program-card reveal fade-up" id="program-arusha-kids-card">
+                        <div class="program-card-icon-wrapper">
+                            <svg class="program-card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                        </div>
+                        <h3 class="program-card-title">Arusha Kids</h3>
+                        <p class="program-card-desc">A children’s talent development program that nurtures creativity through singing, dancing, acting, public speaking, leadership, and financial literacy in a safe and joyful space.</p>
+                        <a href="#spotlight-arusha-kids" class="program-card-link">Learn More →</a>
+                    </article>
+
+                    <!-- Program 2: Arusha's Got Talent -->
+                    <article class="program-card reveal fade-up" id="program-got-talent-card">
+                        <div class="program-card-icon-wrapper">
+                            <svg class="program-card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3 class="program-card-title">Arusha's Got Talent</h3>
+                        <p class="program-card-desc">A flagship talent competition and showcase platform that identifies, celebrates, and promotes exceptional young performers from schools and communities across the region.</p>
+                        <a href="#spotlight-got-talent" class="program-card-link">Learn More →</a>
+                    </article>
+
+                    <!-- Program 3: Talent Training & Mentorship -->
+                    <article class="program-card reveal fade-up" id="program-mentorship-card">
+                        <div class="program-card-icon-wrapper">
+                            <svg class="program-card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347"/></svg>
+                        </div>
+                        <h3 class="program-card-title">Talent Training &amp; Mentorship</h3>
+                        <p class="program-card-desc">Regular training sessions, workshops, mentorship, and guided coaching that help children and youth refine their skills and build lasting creative and personal confidence.</p>
+                        <a href="#spotlight-mentorship" class="program-card-link">Learn More →</a>
+                    </article>
+
+                    <!-- Program 4: Leadership & Life Skills -->
+                    <article class="program-card reveal fade-up" id="program-leadership-card">
+                        <div class="program-card-icon-wrapper">
+                            <svg class="program-card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                        </div>
+                        <h3 class="program-card-title">Leadership &amp; Life Skills</h3>
+                        <p class="program-card-desc">Programs that equip young people with communication skills, leadership confidence, financial literacy, resilience, and personal development for life readiness.</p>
+                        <a href="#spotlight-leadership" class="program-card-link">Learn More →</a>
+                    </article>
+
+                    <!-- Program 5: Community Outreach -->
+                    <article class="program-card reveal fade-up" id="program-outreach-card">
+                        <div class="program-card-icon-wrapper">
+                            <svg class="program-card-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9"/></svg>
+                        </div>
+                        <h3 class="program-card-title">Community Outreach</h3>
+                        <p class="program-card-desc">Partnerships with schools, parents, and local communities to expand access to talent development, mentorship, and creative opportunities for children and youth.</p>
+                        <a href="#spotlight-outreach" class="program-card-link">Learn More →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 4) DETAILED PROGRAM SPOTLIGHT SECTIONS        -->
+        <!-- ============================================ -->
+        
+        <!-- A) Arusha Kids Spotlight -->
+        <section class="program-spotlight-section section" id="spotlight-arusha-kids">
+            <div class="container">
+                <div class="spotlight-grid">
+                    <div class="spotlight-image reveal fade-left">
+                        <img src="assets/images/programs/arusha-kids.jpg" alt="Children joyfully singing and dancing during an Arusha Kids session at Kipaji Spark" />
+                    </div>
+                    <div class="spotlight-content reveal fade-right">
+                        <span class="section-eyebrow">Children's Program</span>
+                        <h2 class="section-title">Arusha Kids</h2>
+                        <p class="section-desc">
+                            Arusha Kids is Kipaji Spark's foundational program for younger children — a vibrant and nurturing space where 
+                            creativity, confidence, and character grow together. Through singing, dancing, acting, public speaking, 
+                            and interactive learning, children discover their unique gifts in a joyful, structured environment.
+                        </p>
+                        <p class="section-desc">
+                            Beyond talent, Arusha Kids introduces early leadership, teamwork, financial literacy, and self-belief, 
+                            helping children build a strong foundation for lifelong growth.
+                        </p>
+                        <div class="spotlight-gains">
+                            <h4>What children gain</h4>
+                            <ul>
+                                <li>Confidence in expression and performance</li>
+                                <li>Teamwork, discipline, and collaboration</li>
+                                <li>Early leadership and communication skills</li>
+                                <li>Creative exploration in a safe environment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- B) Arusha's Got Talent Spotlight -->
+        <section class="program-spotlight-section section bg-light" id="spotlight-got-talent">
+            <div class="container">
+                <div class="spotlight-grid reverse">
+                    <div class="spotlight-content reveal fade-left">
+                        <span class="section-eyebrow">Flagship Showcase</span>
+                        <h2 class="section-title">Arusha's Got Talent</h2>
+                        <p class="section-desc">
+                            Arusha's Got Talent is Kipaji Spark's signature platform for identifying, celebrating, and promoting 
+                            exceptional young talent. This competition and showcase brings together children and youth from schools 
+                            and communities to perform, shine, and gain the visibility their gifts deserve.
+                        </p>
+                        <p class="section-desc">
+                            More than a competition, Arusha's Got Talent is a confidence-building experience that connects hidden talent 
+                            with public opportunity, recognition, and encouragement.
+                        </p>
+                        <div class="spotlight-gains">
+                            <h4>Program highlights</h4>
+                            <ul>
+                                <li>Talent showcases and competitions</li>
+                                <li>School and community participation</li>
+                                <li>Recognition, visibility, and exposure</li>
+                                <li>Confidence through performance</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="spotlight-image reveal fade-right">
+                        <img src="assets/images/programs/arusha-got-talent.jpg" alt="Young performer showcasing talent on stage at Arusha's Got Talent event" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- C) Talent Training & Mentorship Spotlight -->
+        <section class="program-spotlight-section section" id="spotlight-mentorship">
+            <div class="container">
+                <div class="spotlight-grid">
+                    <div class="spotlight-image reveal fade-left">
+                        <img src="assets/images/programs/mentorship.jpg" alt="Mentor coaching a young participant during a Kipaji Spark training session" />
+                    </div>
+                    <div class="spotlight-content reveal fade-right">
+                        <span class="section-eyebrow">Structured Development</span>
+                        <h2 class="section-title">Talent Training &amp; Mentorship</h2>
+                        <p class="section-desc">
+                            Talent Training &amp; Mentorship provides regular, structured development for children and youth who are ready 
+                            to deepen their skills. Through workshops, coaching sessions, and one-on-one mentorship relationships, 
+                            participants receive guidance, encouragement, and practical support to refine their abilities.
+                        </p>
+                        <p class="section-desc">
+                            This program is about consistent growth — not just inspiration, but real space to practice, improve, 
+                            and develop creative and personal confidence over time.
+                        </p>
+                        <div class="spotlight-gains">
+                            <h4>What participants receive</h4>
+                            <ul>
+                                <li>Workshops and guided training</li>
+                                <li>Mentorship and coaching</li>
+                                <li>Goal-setting and progress support</li>
+                                <li>Space to practice, improve, and grow</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- D) Leadership & Life Skills Spotlight -->
+        <section class="program-spotlight-section section bg-light" id="spotlight-leadership">
+            <div class="container">
+                <div class="spotlight-grid reverse">
+                    <div class="spotlight-content reveal fade-left">
+                        <span class="section-eyebrow">Whole-Person Development</span>
+                        <h2 class="section-title">Leadership &amp; Life Skills</h2>
+                        <p class="section-desc">
+                            At Kipaji Spark, we believe talent development must go hand in hand with life readiness. The Leadership &amp; Life Skills 
+                            program equips young people with the communication, leadership, financial literacy, and personal development 
+                            skills they need to navigate life with confidence and purpose.
+                        </p>
+                        <p class="section-desc">
+                            Through interactive sessions, young participants learn to lead themselves, work with others, manage resources, 
+                            and build the resilience required for long-term success — on and off the stage.
+                        </p>
+                        <div class="spotlight-gains">
+                            <h4>Core focus areas</h4>
+                            <ul>
+                                <li>Leadership and communication practice</li>
+                                <li>Financial literacy and responsibility</li>
+                                <li>Confidence, self-awareness, and decision-making</li>
+                                <li>Personal development and resilience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="spotlight-image reveal fade-right">
+                        <img src="assets/images/programs/leadership.jpg" alt="Youth engaged in a leadership and life skills workshop at Kipaji Spark" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- E) Community Outreach Spotlight -->
+        <section class="program-spotlight-section section" id="spotlight-outreach">
+            <div class="container">
+                <div class="spotlight-grid">
+                    <div class="spotlight-image reveal fade-left">
+                        <img src="assets/images/programs/community-outreach.jpg" alt="Kipaji Spark team engaging with community members and school partners" />
+                    </div>
+                    <div class="spotlight-content reveal fade-right">
+                        <span class="section-eyebrow">Expanding Access</span>
+                        <h2 class="section-title">Community Outreach</h2>
+                        <p class="section-desc">
+                            Kipaji Spark's Community Outreach program extends the organization's impact beyond its internal programs 
+                            by building partnerships with schools, parents, local communities, and development organizations. 
+                            Through outreach workshops, events, and collaborative initiatives, we bring talent development, mentorship, 
+                            and creative empowerment into more spaces.
+                        </p>
+                        <p class="section-desc">
+                            This program is about building a supportive ecosystem around children and youth — one where families, 
+                            educators, and community leaders work together to nurture the next generation.
+                        </p>
+                        <div class="spotlight-gains">
+                            <h4>Outreach focus</h4>
+                            <ul>
+                                <li>School and community partnerships</li>
+                                <li>Parent and stakeholder engagement</li>
+                                <li>Outreach workshops and events</li>
+                                <li>Wider access to opportunity and mentorship</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 5) HOW OUR PROGRAMS SUPPORT GROWTH            -->
+        <!-- ============================================ -->
+        <section class="growth-pathway-section section bg-light">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">The Journey</span>
+                    <h2 class="section-title">From discovery to confidence, leadership, and opportunity</h2>
+                    <p class="section-subtitle">Kipaji Spark programs work together as a holistic growth pathway for every young person.</p>
+                </div>
+                <div class="pathway-grid">
+                    <div class="pathway-card reveal fade-up">
+                        <div class="pathway-number">01</div>
+                        <h4>Discover</h4>
+                        <p>Children and youth identify and explore their unique gifts in a safe, encouraging space.</p>
+                    </div>
+                    <div class="pathway-card reveal fade-up">
+                        <div class="pathway-number">02</div>
+                        <h4>Train</h4>
+                        <p>They receive coaching, workshops, mentorship, and consistent practice opportunities.</p>
+                    </div>
+                    <div class="pathway-card reveal fade-up">
+                        <div class="pathway-number">03</div>
+                        <h4>Build Confidence</h4>
+                        <p>Through self-expression, communication, and leadership practice, confidence grows naturally.</p>
+                    </div>
+                    <div class="pathway-card reveal fade-up">
+                        <div class="pathway-number">04</div>
+                        <h4>Showcase</h4>
+                        <p>Young people gain platforms to perform, participate, and be seen by their communities.</p>
+                    </div>
+                    <div class="pathway-card reveal fade-up">
+                        <div class="pathway-number">05</div>
+                        <h4>Grow Beyond</h4>
+                        <p>They develop life skills, mentorship connections, and long-term opportunities for the future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 6) PROGRAM OUTCOMES / IMPACT SECTION          -->
+        <!-- ============================================ -->
+        <section class="outcomes-section section">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Program Impact</span>
+                    <h2 class="section-title">What young people gain through our programs</h2>
+                </div>
+                <div class="outcomes-grid">
+                    <div class="outcome-card reveal fade-up">
+                        <div class="outcome-icon">🎤</div>
+                        <h4>Confidence &amp; Self-Expression</h4>
+                        <p>Young participants find their voice, build presence, and express themselves with courage and clarity.</p>
+                    </div>
+                    <div class="outcome-card reveal fade-up">
+                        <div class="outcome-icon">🧑‍🏫</div>
+                        <h4>Leadership &amp; Communication</h4>
+                        <p>Through guided practice, children and youth develop the skills to lead, collaborate, and communicate effectively.</p>
+                    </div>
+                    <div class="outcome-card reveal fade-up">
+                        <div class="outcome-icon">🤲</div>
+                        <h4>Mentorship &amp; Guidance</h4>
+                        <p>Trusted mentors walk alongside young people, offering support, wisdom, and encouragement that builds lasting self-belief.</p>
+                    </div>
+                    <div class="outcome-card reveal fade-up">
+                        <div class="outcome-icon">🎨</div>
+                        <h4>Creativity &amp; Performance</h4>
+                        <p>Programs unlock creative potential and provide real platforms for showcasing artistic and performance abilities.</p>
+                    </div>
+                    <div class="outcome-card reveal fade-up">
+                        <div class="outcome-icon">🤝</div>
+                        <h4>Discipline &amp; Teamwork</h4>
+                        <p>Participants learn the value of commitment, practice, collaboration, and resilience in a supportive environment.</p>
+                    </div>
+                    <div class="outcome-card reveal fade-up">
+                        <div class="outcome-icon">🌟</div>
+                        <h4>Visibility &amp; Opportunity</h4>
+                        <p>Young talent is seen, celebrated, and connected to platforms that open doors for future growth and achievement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 7) WHO CAN PARTICIPATE / PARTNER SECTION      -->
+        <!-- ============================================ -->
+        <section class="participate-section section bg-light">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Get Involved</span>
+                    <h2 class="section-title">Who our programs are for</h2>
+                    <p class="section-subtitle">Kipaji Spark programs create value for children, youth, families, schools, and the wider community.</p>
+                </div>
+                <div class="participate-grid">
+                    <div class="participate-card reveal fade-up">
+                        <div class="participate-icon">🧒</div>
+                        <h4>For Children &amp; Youth</h4>
+                        <p>A place to discover talent, build confidence, and grow through training, performance, mentorship, and life skills.</p>
+                    </div>
+                    <div class="participate-card reveal fade-up">
+                        <div class="participate-icon">👨‍👩‍👧‍👦</div>
+                        <h4>For Parents &amp; Families</h4>
+                        <p>A supportive environment that nurtures children's gifts, confidence, discipline, and personal development.</p>
+                    </div>
+                    <div class="participate-card reveal fade-up">
+                        <div class="participate-icon">🏫</div>
+                        <h4>For Schools &amp; Communities</h4>
+                        <p>A partnership opportunity to bring talent development, leadership, and creative empowerment into student spaces.</p>
+                    </div>
+                    <div class="participate-card reveal fade-up">
+                        <div class="participate-icon">💛</div>
+                        <h4>For Mentors, Donors &amp; Partners</h4>
+                        <p>A chance to help expand access, strengthen talent ecosystems, and support the next generation of leaders and creatives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 8) CTA BANNER SECTION (Shared System)         -->
+        <!-- ============================================ -->
+        <section class="cta-banner-section">
+            <div class="container cta-banner-container reveal fade-up">
+                <div class="cta-banner-content">
+                    <h2 class="cta-banner-title">Help young talent find the right space to grow</h2>
+                    <p class="cta-banner-desc">
+                        Whether you're a parent, school, mentor, partner, or supporter, you can help children and youth access 
+                        meaningful opportunities for talent development, leadership, and life skills through Kipaji Spark.
+                    </p>
+                    <div class="cta-banner-actions">
+                        <a href="contact.html" class="btn btn-primary btn-large">Get Involved</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-large">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- FOOTER (Shared System, identical to Home)     -->
+    <!-- ============================================ -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-column footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/images/logo/logo.png" alt="KIPAJI SPARK Logo" class="logo-icon">
+                    <span class="logo-text">Kipaji <span class="logo-highlight">Spark</span></span>
+                </div>
+                <p class="footer-tagline">My talent my wings.</p>
+                <p class="footer-desc">Discovering, nurturing, and empowering children and youth through arts, creativity, and life skills across Tanzania and Africa.</p>
+                <div class="footer-socials">
+                    <a href="https://facebook.com/kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on Facebook" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on Instagram" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on Twitter" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to KIPAJI SPARK on YouTube" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/company/kipajispark" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on LinkedIn" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">Our Programs</h4>
+                <ul class="footer-links">
+                    <li><a href="programs.html">Arusha Kids</a></li>
+                    <li><a href="programs.html">Arusha's Got Talent</a></li>
+                    <li><a href="programs.html">Talent Training</a></li>
+                    <li><a href="programs.html">Leadership &amp; Life Skills</a></li>
+                    <li><a href="programs.html">Community Outreach</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">Get in Touch</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-icon"><path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" /></svg>
+                        <span>Arusha, Tanzania</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-icon"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" /></svg>
+                        <span>+255 123 456 789</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-icon"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" /><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" /></svg>
+                        <span>info@kipajispark.org</span>
+                    </li>
+                </ul>
+                <div class="footer-newsletter">
+                    <label for="newsletter-email">Subscribe for updates</label>
+                    <div class="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Your email" />
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Kipaji Spark. All rights reserved. My talent my wings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT                                    -->
+    <!-- ============================================ -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>

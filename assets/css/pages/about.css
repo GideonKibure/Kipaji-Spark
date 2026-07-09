@@ -1,0 +1,709 @@
+/* ==========================================================
+   assets/css/pages/about.css
+   Kipaji Spark — About Page Specific Styles
+   ========================================================== */
+
+/* ------------------------------------------------
+   1. About Page Base / Shell
+   ------------------------------------------------ */
+.about-page {
+  background-color: #FFFFFF;
+}
+
+/* ------------------------------------------------
+   2. About Hero Section
+   ------------------------------------------------ */
+.about-hero {
+  background: linear-gradient(180deg, #F8F7FC 0%, #FFFFFF 100%);
+  padding: 100px 0 80px;
+  border-bottom: 1px solid rgba(46, 16, 101, 0.06);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-hero-content {
+  max-width: 540px;
+}
+
+.about-hero-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.about-hero-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.about-hero-content .section-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 32px;
+}
+
+.about-hero-content .hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* About Hero Image */
+.about-hero-image-wrapper {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.about-hero-image-wrapper img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: 28px;
+  transition: transform 0.5s ease;
+}
+
+.about-hero-image-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+.about-hero-image-wrapper .deco-purple-blob {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(91, 33, 182, 0.15) 0%, transparent 70%);
+  bottom: -40px;
+  right: -40px;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+/* ------------------------------------------------
+   3. Who We Are / About Overview Section
+   ------------------------------------------------ */
+.about-overview-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.about-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-overview-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease;
+}
+
+.about-overview-image img:hover {
+  transform: scale(1.01);
+}
+
+.about-overview-content {
+  max-width: 540px;
+}
+
+.about-overview-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.about-overview-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1.25;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.about-overview-content .section-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 16px;
+}
+
+/* Highlight Mini List */
+.highlight-mini-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #F8F7FC;
+  border-radius: 14px;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  font-size: 0.95rem;
+  color: #1E1B2E;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.highlight-item:hover {
+  background: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.05);
+  transform: translateX(4px);
+}
+
+.highlight-icon {
+  font-size: 1.2rem;
+}
+
+/* ------------------------------------------------
+   4. Mission & Vision Section
+   ------------------------------------------------ */
+.mission-vision-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.mv-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 40px 32px;
+  box-shadow: 0 8px 25px rgba(46, 16, 101, 0.04);
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.mv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(46, 16, 101, 0.08);
+}
+
+/* Subtle top accent for visual differentiation */
+.mv-card:first-child {
+  border-top: 4px solid #F4B400;
+}
+
+.mv-card:last-child {
+  border-top: 4px solid #2E1065;
+}
+
+.mv-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background: #EEE9FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #2E1065;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.mv-card:hover .mv-icon-wrapper {
+  background: #2E1065;
+  color: #FFFFFF;
+}
+
+.mv-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.mv-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #1E1B2E;
+  margin-bottom: 16px;
+}
+
+.mv-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   5. Values Section (About Page)
+   ------------------------------------------------ */
+.values-section-about {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.values-grid-about {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.value-card-about {
+  background: #F8F7FC;
+  border-radius: 20px;
+  padding: 32px 20px;
+  text-align: center;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.value-card-about:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+  background: #FFFFFF;
+}
+
+.value-icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: #EEE9FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: #2E1065;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.value-card-about:hover .value-icon-wrap {
+  background: #2E1065;
+  color: #FFFFFF;
+}
+
+.value-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.value-card-about h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1E1B2E;
+  margin-bottom: 8px;
+}
+
+.value-card-about p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   6. Our Story / Why We Exist Section
+   ------------------------------------------------ */
+.story-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-content {
+  max-width: 560px;
+}
+
+.story-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.story-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1.25;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.story-content .section-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 16px;
+}
+
+/* Story Quote */
+.story-quote {
+  margin-top: 28px;
+  padding: 24px 28px;
+  background: #FFFFFF;
+  border-left: 5px solid #F4B400;
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #2E1065;
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.04);
+  position: relative;
+  font-style: italic;
+}
+
+.story-quote::before {
+  content: '“';
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  font-size: 3rem;
+  color: #F4B400;
+  opacity: 0.4;
+  line-height: 1;
+}
+
+/* Story Image */
+.story-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease;
+}
+
+.story-image img:hover {
+  transform: scale(1.01);
+}
+
+/* ------------------------------------------------
+   7. Approach / How We Work Section
+   ------------------------------------------------ */
+.approach-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.approach-card {
+  background: #F8F7FC;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+}
+
+.approach-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+  background: #FFFFFF;
+}
+
+.approach-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #2E1065;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  transition: background 0.3s ease;
+}
+
+.approach-card:hover .approach-number {
+  background: #F4B400;
+  color: #1E1B2E;
+}
+
+.approach-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1E1B2E;
+  margin-bottom: 12px;
+}
+
+.approach-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   8. Impact / What Makes Us Different Section
+   ------------------------------------------------ */
+.impact-different-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.impact-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.impact-pillar {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-pillar:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+}
+
+.pillar-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.impact-pillar h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1E1B2E;
+  margin-bottom: 10px;
+}
+
+.impact-pillar p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   9. CTA Banner Spacing (Local Adjustment)
+   ------------------------------------------------ */
+.cta-banner-section {
+  /* Inherits global styling; ensure spacing feels natural */
+  margin-top: 0;
+}
+
+/* ------------------------------------------------
+   10. About Page Specific Responsive Rules
+   ------------------------------------------------ */
+
+/* Large Desktop / Laptop */
+@media (max-width: 1200px) {
+  .values-grid-about {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  .about-hero-grid,
+  .about-overview-grid,
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .about-hero-image-wrapper img,
+  .about-overview-image img,
+  .story-image img {
+    height: 400px;
+  }
+  
+  .about-hero-content,
+  .about-overview-content,
+  .story-content {
+    max-width: 100%;
+  }
+  
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .impact-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .values-grid-about {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 0 60px;
+  }
+  
+  .about-hero-image-wrapper img,
+  .about-overview-image img,
+  .story-image img {
+    height: 340px;
+  }
+  
+  .values-grid-about {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .approach-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .impact-pillars-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .about-overview-section,
+  .mission-vision-section,
+  .values-section-about,
+  .story-section,
+  .approach-section,
+  .impact-different-section {
+    padding: 60px 0;
+  }
+  
+  .story-quote {
+    padding: 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .about-hero-content .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-hero-content .hero-actions {
+    flex-direction: column;
+  }
+  
+  .about-hero-content .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .about-hero-image-wrapper img,
+  .about-overview-image img,
+  .story-image img {
+    height: 260px;
+    border-radius: 20px;
+  }
+  
+  .mission-vision-grid {
+    gap: 20px;
+  }
+  
+  .mv-card {
+    padding: 28px 20px;
+  }
+  
+  .values-grid-about {
+    grid-template-columns: 1fr;
+  }
+  
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .impact-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .highlight-mini-list {
+    gap: 8px;
+  }
+  
+  .highlight-item {
+    padding: 12px 14px;
+    aboutfont-size: 0.9rem;
+  }
+  
+  .story-quote {
+    border-left-width: 4px;
+    padding: 18px 16px;
+    font-size: 0.95rem;
+  }
+}

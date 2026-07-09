@@ -1,0 +1,768 @@
+/* ==========================================================
+   assets/css/pages/events.css
+   Kipaji Spark — Events Page Specific Styles
+   ========================================================== */
+
+/* ------------------------------------------------
+   1. Events Page Base / Shell
+   ------------------------------------------------ */
+.events-page {
+  background-color: #FFFFFF;
+}
+
+/* ------------------------------------------------
+   2. Events Hero Section
+   ------------------------------------------------ */
+.events-hero {
+  background: linear-gradient(180deg, #F8F7FC 0%, #FFFFFF 100%);
+  padding: 100px 0 80px;
+  border-bottom: 1px solid rgba(46, 16, 101, 0.06);
+}
+
+.events-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.events-hero-content {
+  max-width: 540px;
+}
+
+.events-hero-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.events-hero-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.events-hero-content .section-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 32px;
+}
+
+.events-hero-content .hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Events Hero Image */
+.events-hero-image-wrapper {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.events-hero-image-wrapper img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: 28px;
+  transition: transform 0.5s ease;
+}
+
+.events-hero-image-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+.events-hero-image-wrapper .deco-purple-blob {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(91, 33, 182, 0.15) 0%, transparent 70%);
+  bottom: -40px;
+  right: -40px;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+/* ------------------------------------------------
+   3. Events Overview / Intro Section
+   ------------------------------------------------ */
+.events-overview-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.events-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.events-overview-content {
+  max-width: 560px;
+}
+
+.events-overview-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.events-overview-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1.25;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.events-overview-content .section-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 16px;
+}
+
+/* Overview Focus Side Card */
+.overview-focus-card {
+  background: #F8F7FC;
+  border-radius: 24px;
+  padding: 36px 32px;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 8px 25px rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overview-focus-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(46, 16, 101, 0.06);
+}
+
+.overview-focus-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.focus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.focus-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #1E1B2E;
+  font-weight: 500;
+}
+
+.focus-icon {
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ------------------------------------------------
+   4. Featured / Upcoming Events Grid Section
+   ------------------------------------------------ */
+.featured-events-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.featured-events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Event Card */
+.event-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 8px 25px rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(46, 16, 101, 0.08);
+}
+
+.event-card-image {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-card-image img {
+  transform: scale(1.05);
+}
+
+.event-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #2E1065;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 50px;
+}
+
+.event-card-body {
+  padding: 24px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.event-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1E1B2E;
+  margin-bottom: 10px;
+}
+
+.event-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.event-meta-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #5F6473;
+  background: #F8F7FC;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.event-card-link {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2E1065;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.event-card-link:hover {
+  color: #F4B400;
+  transform: translateX(4px);
+}
+
+/* ------------------------------------------------
+   5. Signature Event Experiences Section
+   ------------------------------------------------ */
+.signature-experiences-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.signature-experiences-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  margin-top: 40px;
+}
+
+.signature-experience-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.signature-experience-card.reverse .signature-image {
+  order: 2;
+}
+.signature-experience-card.reverse .signature-content {
+  order: 1;
+}
+
+.signature-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease;
+}
+
+.signature-image img:hover {
+  transform: scale(1.01);
+}
+
+.signature-content {
+  max-width: 540px;
+}
+
+.signature-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.signature-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  color: #1E1B2E;
+  margin-bottom: 16px;
+}
+
+.signature-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 20px;
+}
+
+.signature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signature-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #1E1B2E;
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.signature-list li::before {
+  content: '•';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  color: #F4B400;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ------------------------------------------------
+   6. Event Categories / Event Types Section
+   ------------------------------------------------ */
+.event-categories-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.event-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.category-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+  background: #FFFFFF;
+}
+
+.category-icon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.category-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1E1B2E;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   7. Event Impact / Why Events Matter Section
+   ------------------------------------------------ */
+.event-impact-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.event-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.impact-card {
+  background: #F8F7FC;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+  background: #FFFFFF;
+}
+
+.impact-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.impact-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1E1B2E;
+  margin-bottom: 10px;
+}
+
+.impact-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   8. Participation / Partnership Section
+   ------------------------------------------------ */
+.participate-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.participate-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.participate-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 32px 22px;
+  text-align: center;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.participate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+}
+
+.participate-icon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.participate-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1E1B2E;
+  margin-bottom: 10px;
+}
+
+.participate-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin: 0;
+}
+
+/* ------------------------------------------------
+   9. Event Highlights Strip
+   ------------------------------------------------ */
+.event-highlights-strip {
+  padding: 48px 0;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(46, 16, 101, 0.05);
+}
+
+.highlights-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.highlight-pill {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 12px 22px;
+  border-radius: 50px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.highlight-pill:hover {
+  background: #2E1065;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------------
+   10. CTA Banner Spacing (Local Adjustment)
+   ------------------------------------------------ */
+.cta-banner-section {
+  margin-top: 0;
+}
+
+/* ------------------------------------------------
+   11. Events Page Specific Responsive Rules
+   ------------------------------------------------ */
+
+/* Large Desktop / Laptop */
+@media (max-width: 1200px) {
+  .featured-events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .event-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .event-impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .participate-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  .events-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .events-hero-content {
+    max-width: 100%;
+  }
+  .events-hero-image-wrapper img {
+    height: 400px;
+  }
+  .events-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .events-overview-content {
+    max-width: 100%;
+  }
+  .signature-experience-card {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .signature-experience-card.reverse .signature-image {
+    order: -1;
+  }
+  .signature-experience-card.reverse .signature-content {
+    order: 1;
+  }
+  .signature-image img {
+    height: 360px;
+  }
+  .signature-content {
+    max-width: 100%;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .events-hero {
+    padding: 80px 0 60px;
+  }
+  .events-hero-image-wrapper img {
+    height: 340px;
+  }
+  .featured-events-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .event-card-image {
+    height: 180px;
+  }
+  .event-categories-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .event-impact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .participate-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .events-overview-section,
+  .featured-events-section,
+  .signature-experiences-section,
+  .event-categories-section,
+  .event-impact-section,
+  .participate-section {
+    padding: 60px 0;
+  }
+  .signature-experiences-grid {
+    gap: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .events-hero-content .section-title {
+    font-size: 1.8rem;
+  }
+  .events-hero-content .hero-actions {
+    flex-direction: column;
+  }
+  .events-hero-content .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .events-hero-image-wrapper img {
+    height: 260px;
+    border-radius: 20px;
+  }
+  .featured-events-grid {
+    grid-template-columns: 1fr;
+  }
+  .event-card-image {
+    height: 200px;
+  }
+  .signature-image img {
+    height: 260px;
+    border-radius: 20px;
+  }
+  .event-categories-grid {
+    grid-template-columns: 1fr;
+  }
+  .event-impact-grid {
+    grid-template-columns: 1fr;
+  }
+  .participate-grid {
+    grid-template-columns: 1fr;
+  }
+  .highlights-strip {
+    gap: 12px;
+  }
+  .highlight-pill {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+  .overview-focus-card {
+    padding: 24px 20px;
+  }
+  .signature-experiences-grid {
+    gap: 32px;
+  }
+}

@@ -1,0 +1,765 @@
+/* ==========================================================
+   assets/css/pages/gallery.css
+   Kipaji Spark — Gallery Page Specific Styles
+   ========================================================== */
+
+/* ------------------------------------------------
+   1. Gallery Page Base / Shell
+   ------------------------------------------------ */
+.gallery-page {
+  background-color: #FFFFFF;
+}
+
+/* ------------------------------------------------
+   2. Gallery Hero Section
+   ------------------------------------------------ */
+.gallery-hero {
+  background: linear-gradient(180deg, #F8F7FC 0%, #FFFFFF 100%);
+  padding: 100px 0 80px;
+  border-bottom: 1px solid rgba(46, 16, 101, 0.06);
+}
+
+.gallery-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.gallery-hero-content {
+  max-width: 540px;
+}
+
+.gallery-hero-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.gallery-hero-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.gallery-hero-content .section-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 32px;
+}
+
+.gallery-hero-content .hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Gallery Hero Collage */
+.gallery-hero-collage {
+  position: relative;
+  border-radius: 28px;
+}
+
+.gallery-hero-collage .collage-main {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s ease;
+}
+
+.gallery-hero-collage .collage-secondary {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.gallery-hero-collage:hover .collage-main {
+  transform: scale(1.01);
+}
+
+.gallery-hero-collage:hover .collage-secondary {
+  transform: scale(1.03);
+}
+
+.gallery-hero-collage .deco-purple-blob {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(91, 33, 182, 0.12) 0%, transparent 70%);
+  bottom: -60px;
+  left: -60px;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ------------------------------------------------
+   3. Gallery Intro / Visual Story Overview Section
+   ------------------------------------------------ */
+.gallery-intro-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.gallery-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.gallery-intro-content {
+  max-width: 560px;
+}
+
+.gallery-intro-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.gallery-intro-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1.25;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.gallery-intro-content .section-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 16px;
+}
+
+/* Intro Focus Side Card */
+.intro-focus-card {
+  background: #F8F7FC;
+  border-radius: 24px;
+  padding: 36px 32px;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 8px 25px rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-focus-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(46, 16, 101, 0.06);
+}
+
+.intro-focus-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.focus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.focus-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #1E1B2E;
+  font-weight: 500;
+}
+
+.focus-icon {
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ------------------------------------------------
+   4. Gallery Spotlight Moments Section
+   ------------------------------------------------ */
+.gallery-spotlights-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.gallery-spotlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.gallery-spotlight-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(46, 16, 101, 0.04);
+  box-shadow: 0 8px 25px rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-spotlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(46, 16, 101, 0.08);
+}
+
+.spotlight-card-image {
+  height: 240px;
+  overflow: hidden;
+}
+
+.spotlight-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-spotlight-card:hover .spotlight-card-image img {
+  transform: scale(1.05);
+}
+
+.spotlight-card-body {
+  padding: 24px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.spotlight-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1E1B2E;
+  margin-bottom: 10px;
+}
+
+.spotlight-card-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5F6473;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.spotlight-card-link {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2E1065;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.spotlight-card-link:hover {
+  color: #F4B400;
+  transform: translateX(4px);
+}
+
+/* ------------------------------------------------
+   5. Gallery Filter Controls
+   ------------------------------------------------ */
+.gallery-filters-section {
+  padding: 48px 0 0;
+  background: #FFFFFF;
+}
+
+.gallery-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.gallery-filter-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #5F6473;
+  background: #F8F7FC;
+  border: 1px solid rgba(46, 16, 101, 0.06);
+  padding: 12px 22px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.gallery-filter-button:hover {
+  background: #EEE9FF;
+  color: #2E1065;
+  border-color: rgba(46, 16, 101, 0.1);
+}
+
+.gallery-filter-button.is-active {
+  background: #2E1065;
+  color: #FFFFFF;
+  border-color: #2E1065;
+  font-weight: 600;
+}
+
+.gallery-filter-button:focus-visible {
+  outline: 3px solid #F4B400;
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------
+   6. Main Gallery Grid / Masonry Layout
+   ------------------------------------------------ */
+.gallery-grid-section {
+  padding: 48px 0 80px;
+  background: #FFFFFF;
+}
+
+.gallery-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 280px;
+  gap: 20px;
+}
+
+/* Create varied spans for editorial feel */
+.gallery-item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item:nth-child(4) {
+  grid-column: span 2;
+}
+
+.gallery-item:nth-child(7) {
+  grid-row: span 2;
+}
+
+.gallery-item:nth-child(10) {
+  grid-column: span 2;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #F8F7FC;
+  box-shadow: 0 6px 20px rgba(46, 16, 101, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(46, 16, 101, 0.08);
+}
+
+.gallery-item-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover .gallery-item-image img {
+  transform: scale(1.06);
+}
+
+/* Caption Overlay */
+.gallery-item-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 18px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.55) 100%);
+  color: #FFFFFF;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.gallery-item:hover .gallery-item-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-item-category {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #F4B400;
+  color: #1E1B2E;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.gallery-item-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+/* Hidden state for filtering */
+.gallery-item.is-hidden {
+  display: none;
+}
+
+/* ------------------------------------------------
+   7. Gallery Impact / Story Section
+   ------------------------------------------------ */
+.gallery-impact-section {
+  padding: 80px 0;
+  background: #F8F7FC;
+}
+
+.gallery-impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.gallery-impact-content {
+  max-width: 560px;
+}
+
+.gallery-impact-content .section-eyebrow {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2E1065;
+  background: #EEE9FF;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.gallery-impact-content .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1.25;
+  color: #1E1B2E;
+  margin-bottom: 20px;
+}
+
+.gallery-impact-content .section-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5F6473;
+  margin-bottom: 16px;
+}
+
+.gallery-impact-image img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease;
+}
+
+.gallery-impact-image img:hover {
+  transform: scale(1.01);
+}
+
+/* ------------------------------------------------
+   8. Quote / Memory Strip
+   ------------------------------------------------ */
+.gallery-quote-strip {
+  padding: 56px 0;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(46, 16, 101, 0.05);
+}
+
+.quote-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.quote-strip-item {
+  text-align: center;
+  padding: 0 12px;
+}
+
+.quote-strip-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #2E1065;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+}
+
+.quote-strip-text::before {
+  content: '"';
+  display: block;
+  font-size: 2.5rem;
+  color: #F4B400;
+  opacity: 0.4;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+/* ------------------------------------------------
+   9. CTA Banner Spacing (Local Adjustment)
+   ------------------------------------------------ */
+.cta-banner-section {
+  margin-top: 0;
+}
+
+/* ------------------------------------------------
+   10. Gallery Page Specific Responsive Rules
+   ------------------------------------------------ */
+
+/* Large Desktop / Laptop */
+@media (max-width: 1200px) {
+  .gallery-masonry-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 260px;
+  }
+  .gallery-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .gallery-item:nth-child(4) {
+    grid-column: span 1;
+  }
+  .gallery-item:nth-child(7) {
+    grid-row: span 1;
+  }
+  .gallery-item:nth-child(10) {
+    grid-column: span 1;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  .gallery-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .gallery-hero-content {
+    max-width: 100%;
+  }
+  .gallery-hero-collage .collage-main {
+    height: 380px;
+  }
+  .gallery-hero-collage .collage-secondary {
+    width: 160px;
+    height: 160px;
+    bottom: -24px;
+    right: -24px;
+  }
+  .gallery-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .gallery-intro-content {
+    max-width: 100%;
+  }
+  .gallery-spotlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-masonry-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
+  }
+  .gallery-item:nth-child(1) {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  .gallery-item:nth-child(4) {
+    grid-column: span 1;
+  }
+  .gallery-item:nth-child(7) {
+    grid-row: span 2;
+  }
+  .gallery-item:nth-child(10) {
+    grid-column: span 1;
+  }
+  .gallery-impact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .gallery-impact-content {
+    max-width: 100%;
+  }
+  .gallery-impact-image img {
+    height: 380px;
+  }
+  .quote-strip-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .gallery-hero {
+    padding: 80px 0 60px;
+  }
+  .gallery-hero-collage .collage-main {
+    height: 320px;
+  }
+  .gallery-hero-collage .collage-secondary {
+    width: 130px;
+    height: 130px;
+    bottom: -20px;
+    right: -20px;
+    border-radius: 16px;
+  }
+  .gallery-spotlights-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .spotlight-card-image {
+    height: 200px;
+  }
+  .gallery-masonry-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 220px;
+    gap: 16px;
+  }
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(7) {
+    grid-row: span 1;
+  }
+  .gallery-filter-tabs {
+    gap: 8px;
+  }
+  .gallery-filter-button {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+  .gallery-intro-section,
+  .gallery-spotlights-section,
+  .gallery-grid-section,
+  .gallery-impact-section {
+    padding: 60px 0;
+  }
+  .gallery-quote-strip {
+    padding: 40px 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .gallery-hero-content .section-title {
+    font-size: 1.8rem;
+  }
+  .gallery-hero-content .hero-actions {
+    flex-direction: column;
+  }
+  .gallery-hero-content .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .gallery-hero-collage .collage-main {
+    height: 260px;
+    border-radius: 20px;
+  }
+  .gallery-hero-collage .collage-secondary {
+    width: 100px;
+    height: 100px;
+    bottom: -16px;
+    right: -16px;
+    border-radius: 14px;
+  }
+  .gallery-spotlights-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-masonry-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 260px;
+    gap: 16px;
+  }
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(4),
+  .gallery-item:nth-child(7),
+  .gallery-item:nth-child(10) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .gallery-filter-tabs {
+    gap: 6px;
+  }
+  .gallery-filter-button {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  .gallery-impact-image img {
+    height: 260px;
+    border-radius: 20px;
+  }
+  .quote-strip-text {
+    font-size: 0.95rem;
+  }
+  .intro-focus-card {
+    padding: 24px 20px;
+  }
+  .gallery-item-caption {
+    padding: 14px 14px;
+  }
+}
