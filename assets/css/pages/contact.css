@@ -133,7 +133,7 @@
   border-radius: 20px;
   padding: 32px 22px;
   text-align: center;
-  border: 1px solid rgba(46, 16, 101, 0.04);
+  border: 1px solid rgba(46, 16, 101, 0.144);
   box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
@@ -367,7 +367,7 @@
   border-radius: 20px;
   padding: 32px 24px;
   text-align: center;
-  border: 1px solid rgba(46, 16, 101, 0.04);
+  border: 1px solid rgba(46, 16, 101, 0.16);
   box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
@@ -448,7 +448,8 @@
    9. CTA Banner Spacing (Local Adjustment)
    ------------------------------------------------ */
 .cta-banner-section {
-  margin-top: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* ------------------------------------------------
@@ -543,3 +544,38 @@
     padding: 22px 18px;
   }
 }
+
+/* ------------------------------------------------
+   11. Hero Contact Card Icon Hover Effects
+   ------------------------------------------------ */
+
+.hero-contact-icon i {
+    color: #2E1065; /* Dark purple */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-contact-item:hover .hero-contact-icon i {
+    color: #F4B400; /* Gold */
+    transform: scale(1.2);
+}
+
+.option-icon i {
+    color: #2E1065; /* Dark purple */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-option-card:hover .option-icon i {
+    color: #F4B400; /* Gold */
+    transform: scale(1.2);
+}
+
+.reason-icon i {
+    color: #2E1065; /* Dark purple */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.inquiry-reason-card:hover .reason-icon i {
+    color: #F4B400; /* Gold */
+    transform: scale(1.2);
+}
+
