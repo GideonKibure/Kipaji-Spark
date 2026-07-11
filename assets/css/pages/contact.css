@@ -579,3 +579,24 @@
     transform: scale(1.2);
 }
 
+.contact-form-status {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: none;
+}
+
+.contact-form-status.is-success {
+    display: block;
+    background: rgba(46, 125, 50, 0.1);
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+.contact-form-status.is-error {
+    display: block;
+    background: rgba(211, 47, 47, 0.1);
+    color: #c62828;
+    border: 1px solid #c62828;
+}

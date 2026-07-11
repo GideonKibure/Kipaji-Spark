@@ -43,7 +43,15 @@
     const statusEl = $('.contact-form-status');
     const isDemo = form.hasAttribute('data-demo-form') || form.getAttribute('data-demo-form') === 'true';
 
-    form.addEventListener('submit', (e) => {
+    // --- CHANGES FOR FORMSPREE START HERE ---
+    // Get the form action URL - you need to add this to your HTML form
+    const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID'; // ← CHANGE: Replace with your Formspree form ID
+
+    // Set the form action and method for Formspree
+    form.setAttribute('action', FORMSPREE_URL);
+    form.setAttribute('method', 'POST');
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       // Clear previous status
@@ -55,10 +63,16 @@
       // Gather field values
       const fullName = ($('[name="fullName"]', form) || $('[name="full-name"]', form));
       const email = ($('[name="email"]', form));
+      const phone = ($('[name="phone"]', form));
+      const inquiryType = ($('[name="inquiryType"]', form) || $('[name="inquiry-type"]', form) || $('#inquiry-type'));
+      const subject = ($('[name="subject"]', form));
       const message = ($('[name="message"]', form));
 
       const nameValue = fullName ? fullName.value.trim() : '';
       const emailValue = email ? email.value.trim() : '';
+      const phoneValue = phone ? phone.value.trim() : '';
+      const inquiryTypeValue = inquiryType ? inquiryType.value : '';
+      const subjectValue = subject ? subject.value.trim() : '';
       const messageValue = message ? message.value.trim() : '';
 
       // Validate required fields
@@ -110,24 +124,71 @@
         return;
       }
 
-      // Real backend mode: allow submission
-      if (statusEl) {
-        statusEl.textContent = 'Sending your message...';
-        statusEl.classList.add('is-success');
-      }
-      // Optionally disable submit button briefly
+      // --- FORMSPREE SUBMISSION ---
+      // Disable submit button
       const submitBtn = $('button[type="submit"]', form);
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
-        setTimeout(() => {
+      }
+
+      // Show sending status
+      if (statusEl) {
+        statusEl.textContent = 'Sending your message...';
+        statusEl.classList.add('is-success');
+      }
+
+      try {
+        // Prepare form data
+        const formData = new FormData(form);
+        
+        // Send to Formspree
+        const response = await fetch(FORMSPREE_URL, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Success!
+          if (statusEl) {
+            statusEl.textContent = '✅ Thank you! Your message has been sent successfully. We\'ll get back to you soon!';
+            statusEl.classList.remove('is-error');
+            statusEl.classList.add('is-success');
+          }
+          form.reset();
+          // Remove has-value classes
+          $$('.form-group input, .form-group textarea, .form-group select', form).forEach(field => {
+            field.classList.remove('has-value');
+          });
+        } else {
+          // Error from Formspree
+          const errorData = await response.json();
+          if (statusEl) {
+            statusEl.textContent = `❌ ${errorData.error || 'Something went wrong. Please try again later.'}`;
+            statusEl.classList.remove('is-success');
+            statusEl.classList.add('is-error');
+          }
+        }
+      } catch (error) {
+        // Network error
+        if (statusEl) {
+          statusEl.textContent = '❌ Network error. Please check your connection and try again.';
+          statusEl.classList.remove('is-success');
+          statusEl.classList.add('is-error');
+        }
+        console.error('Form submission error:', error);
+      } finally {
+        // Re-enable submit button
+        if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send Message';
-        }, 3000);
+        }
       }
-      // For actual backend integration, form.submit() would be called here
-      // after the async request completes. Currently prevented by e.preventDefault().
     });
+    // --- CHANGES FOR FORMSPREE END HERE ---
 
     function markFieldInvalid(field, isInvalid) {
       if (isInvalid) {
