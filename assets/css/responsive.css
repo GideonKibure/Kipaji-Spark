@@ -411,6 +411,50 @@ body {
 }
 
 /* ==========================================================
+   FOOTER - Match the home page on smaller screens
+   ========================================================== */
+@media (max-width: 1024px) {
+    .site-footer .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer .footer-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .site-footer .newsletter-form {
+        flex-direction: column;
+    }
+
+    .site-footer .newsletter-form .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        padding-top: 40px;
+    }
+
+    .site-footer .footer-container {
+        gap: 24px;
+    }
+
+    .site-footer .footer-desc {
+        max-width: 100%;
+    }
+
+    .site-footer .footer-socials {
+        flex-wrap: wrap;
+    }
+}
+
+/* ==========================================================
    PROGRAM CARDS - Updated icon style
    ========================================================== */
 .program-card-icon-wrapper {
