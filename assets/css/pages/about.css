@@ -516,11 +516,11 @@
 }
 
 .impact-pillar {
-  background: #FFFFFF;
+  background: #F8F7FC;
   border-radius: 20px;
   padding: 32px 24px;
   text-align: center;
-  border: 1px solid rgba(46, 16, 101, 0.04);
+  border: 1px solid rgba(46, 16, 101, 0.444);
   box-shadow: 0 6px 20px rgba(46, 16, 101, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -528,6 +528,7 @@
 .impact-pillar:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 30px rgba(46, 16, 101, 0.06);
+  background: #FFFFFF;
 }
 
 .pillar-icon {
@@ -556,7 +557,8 @@
    ------------------------------------------------ */
 .cta-banner-section {
   /* Inherits global styling; ensure spacing feels natural */
-  margin-top: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* ------------------------------------------------
@@ -706,4 +708,15 @@
     padding: 18px 16px;
     font-size: 0.95rem;
   }
+}
+
+/* Add this CSS */
+.pillar-icon i {
+    font-size: 48px;
+    color: #2E1065; 
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.pillar-icon:hover i {
+    color: #F4B400; /* Gold color on hover */
 }
