@@ -1138,3 +1138,157 @@ body.no-scroll {
         transform: scale(0.95);
     }
 }
+
+/* ==========================================================
+   WHATSAPP FLOATING BUTTON - Glassmorphism Style
+   ========================================================== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 88px; /* Position above back-to-top button (which is at 24px + 52px height + 12px gap) */
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 8px 32px rgba(37, 211, 102, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    will-change: transform, box-shadow;
+}
+
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.whatsapp-float:hover {
+    transform: translateY(-4px) scale(1.08);
+    background: rgba(37, 211, 102, 0.95);
+    box-shadow: 
+        0 12px 40px rgba(37, 211, 102, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.whatsapp-float:hover svg {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* Active/Pressed state */
+.whatsapp-float:active {
+    transform: scale(0.92);
+    transition-duration: 0.1s;
+}
+
+/* Pulse animation for attention */
+@keyframes whatsappPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.whatsapp-float {
+    animation: whatsappPulse 2.5s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+    animation-play-state: paused;
+}
+
+/* ==========================================================
+   WHATSAPP FLOATING BUTTON - TABLET (576px and up)
+   ========================================================== */
+@media (min-width: 576px) {
+    .whatsapp-float {
+        bottom: 96px;
+        right: 32px;
+        width: 60px;
+        height: 60px;
+    }
+    .whatsapp-float svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* ==========================================================
+   WHATSAPP FLOATING BUTTON - TABLET LANDSCAPE (769px and up)
+   ========================================================== */
+@media (min-width: 769px) {
+    .whatsapp-float {
+        bottom: 108px;
+        right: 40px;
+        width: 64px;
+        height: 64px;
+    }
+    .whatsapp-float svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* ==========================================================
+   WHATSAPP FLOATING BUTTON - DESKTOP (992px and up)
+   ========================================================== */
+@media (min-width: 992px) {
+    .whatsapp-float {
+        bottom: 116px;
+        right: 40px;
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* ==========================================================
+   WHATSAPP FLOATING BUTTON - ACCESSIBILITY
+   ========================================================== */
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp-float {
+        animation: none !important;
+    }
+    .whatsapp-float:hover svg {
+        transform: none !important;
+    }
+    .whatsapp-float svg {
+        transition: none !important;
+    }
+}
+
+/* Touch device optimization */
+@media (hover: none) and (pointer: coarse) {
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        bottom: 88px;
+        right: 24px;
+    }
+    .whatsapp-float:active {
+        transform: scale(0.9);
+    }
+    .whatsapp-float:hover {
+        transform: scale(1);
+    }
+}

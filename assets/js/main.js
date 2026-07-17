@@ -19,6 +19,7 @@
         const navCloseBtn = document.querySelector('.nav-close-btn');
         const body = document.body;
         const backToTopBtn = document.getElementById('backToTop');
+        const whatsappFloat = document.getElementById('whatsappFloat');
 
         // ==========================================================
         // 2. AUTO-HIDE STICKY NAVIGATION (Hide on scroll down, show on scroll up)
@@ -159,7 +160,57 @@
         }
 
         // ==========================================================
-        // 4. MOBILE MENU TOGGLE
+        // 4. WHATSAPP FLOATING BUTTON
+        // ==========================================================
+        function initWhatsAppFloat() {
+            if (!whatsappFloat) return;
+
+            let ticking = false;
+
+            function toggleWhatsApp() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const windowHeight = window.innerHeight;
+                
+                // Show button after scrolling past 300px or one viewport height
+                if (scrollTop > Math.min(300, windowHeight * 0.5)) {
+                    whatsappFloat.style.opacity = '1';
+                    whatsappFloat.style.visibility = 'visible';
+                    whatsappFloat.style.transform = 'scale(1)';
+                } else {
+                    whatsappFloat.style.opacity = '0';
+                    whatsappFloat.style.visibility = 'hidden';
+                    whatsappFloat.style.transform = 'scale(0.8)';
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(toggleWhatsApp);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // Click handler for WhatsApp
+            whatsappFloat.addEventListener('click', function(e) {
+                // Button feedback
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+
+                // Close mobile menu if open
+                if (mainNav && mainNav.classList.contains('open')) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Initial state - hidden at top
+            toggleWhatsApp();
+        }
+
+        // ==========================================================
+        // 5. MOBILE MENU TOGGLE
         // ==========================================================
         let isMenuOpen = false;
 
@@ -294,7 +345,7 @@
         }
 
         // ==========================================================
-        // 5. STICKY HEADER ON SCROLL (Desktop only)
+        // 6. STICKY HEADER ON SCROLL (Desktop only)
         // ==========================================================
         function initStickyHeader() {
             if (!header) return;
@@ -323,7 +374,7 @@
         }
 
         // ==========================================================
-        // 6. ACTIVE NAV LINK
+        // 7. ACTIVE NAV LINK
         // ==========================================================
         function initActiveNavLink() {
             if (!navLinks.length) return;
@@ -356,7 +407,7 @@
         }
 
         // ==========================================================
-        // 7. SMOOTH SCROLL
+        // 8. SMOOTH SCROLL
         // ==========================================================
         function initSmoothScroll() {
             const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
@@ -395,7 +446,7 @@
         }
 
         // ==========================================================
-        // 8. SCROLL REVEAL ANIMATIONS
+        // 9. SCROLL REVEAL ANIMATIONS
         // ==========================================================
         function initScrollAnimations() {
             const revealElements = document.querySelectorAll('.reveal, .value-card, .program-card, .impact-feature, .card');
@@ -448,7 +499,7 @@
         }
 
         // ==========================================================
-        // 9. INTERACTIVE ELEMENTS
+        // 10. INTERACTIVE ELEMENTS
         // ==========================================================
         function initInteractiveElements() {
             // Button feedback
@@ -482,7 +533,7 @@
         }
 
         // ==========================================================
-        // 10. FOOTER YEAR
+        // 11. FOOTER YEAR
         // ==========================================================
         function initFooterYear() {
             const yearElements = document.querySelectorAll('.footer-bottom .current-year');
@@ -493,7 +544,7 @@
         }
 
         // ==========================================================
-        // 11. REDUCED MOTION LISTENER
+        // 12. REDUCED MOTION LISTENER
         // ==========================================================
         function initReducedMotionListener() {
             const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -511,11 +562,12 @@
         }
 
         // ==========================================================
-        // 12. INITIALIZE
+        // 13. INITIALIZE
         // ==========================================================
         function init() {
             initScrollUpNavigation();
             initBackToTop();
+            initWhatsAppFloat();
             initMobileMenu();
             initStickyHeader();
             initActiveNavLink();
