@@ -21,7 +21,7 @@
         const backToTopBtn = document.getElementById('backToTop');
 
         // ==========================================================
-        // 2. SCROLL-UP NAVIGATION (Hide on scroll down, show on scroll up)
+        // 2. AUTO-HIDE STICKY NAVIGATION (Hide on scroll down, show on scroll up)
         // ==========================================================
         function initScrollUpNavigation() {
             if (!header) return;
@@ -34,22 +34,29 @@
             function handleScroll() {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+                // Show header when at the very top
                 if (scrollTop <= 10) {
                     header.classList.remove('hide-header');
                     header.classList.add('show-header');
+                    header.classList.add('at-top');
                     isHeaderHidden = false;
                     lastScrollTop = scrollTop;
                     ticking = false;
                     return;
+                } else {
+                    header.classList.remove('at-top');
                 }
 
+                // Auto-hide logic: hide on scroll down, show on scroll up
                 if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                    // Scrolling down - hide header
                     if (!isHeaderHidden) {
                         header.classList.add('hide-header');
                         header.classList.remove('show-header');
                         isHeaderHidden = true;
                     }
                 } else if (scrollTop < lastScrollTop) {
+                    // Scrolling up - show header
                     if (isHeaderHidden || scrollTop < scrollThreshold) {
                         header.classList.remove('hide-header');
                         header.classList.add('show-header');
@@ -73,9 +80,13 @@
                 if (scrollTop <= 10) {
                     header.classList.remove('hide-header');
                     header.classList.add('show-header');
-                } else if (!isHeaderHidden) {
-                    header.classList.remove('hide-header');
-                    header.classList.add('show-header');
+                    header.classList.add('at-top');
+                } else {
+                    header.classList.remove('at-top');
+                    if (!isHeaderHidden) {
+                        header.classList.remove('hide-header');
+                        header.classList.add('show-header');
+                    }
                 }
             }, { passive: true });
 
@@ -84,9 +95,11 @@
                 if (scrollTop > 10) {
                     header.classList.add('show-header');
                     header.classList.remove('hide-header');
+                    header.classList.remove('at-top');
                 } else {
                     header.classList.remove('hide-header');
                     header.classList.add('show-header');
+                    header.classList.add('at-top');
                 }
             }, 100);
         }
@@ -290,22 +303,11 @@
             let ticking = false;
 
             function handleScroll() {
-                // Only apply on desktop
-                if (window.innerWidth > 768) {
-                    if (window.scrollY > scrollThreshold) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
+                // Apply scrolled class for shadow effect on all devices
+                if (window.scrollY > scrollThreshold) {
+                    header.classList.add('scrolled');
                 } else {
-                    // On mobile, remove scrolled class when header is hidden
-                    if (!header.classList.contains('hide-header')) {
-                        if (window.scrollY > scrollThreshold) {
-                            header.classList.add('scrolled');
-                        } else {
-                            header.classList.remove('scrolled');
-                        }
-                    }
+                    header.classList.remove('scrolled');
                 }
                 ticking = false;
             }

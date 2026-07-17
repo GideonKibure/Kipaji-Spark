@@ -82,7 +82,7 @@ h3 {
 }
 
 /* ==========================================================
-   HEADER / NAVIGATION - Mobile First
+   HEADER / NAVIGATION - Mobile First (Sticky Navigation)
    ========================================================== */
 
 /* Prevent horizontal scroll on mobile */
@@ -93,25 +93,53 @@ body {
     position: relative;
 }
 
+/* Add padding to body to prevent content from hiding behind fixed header */
+body {
+    padding-top: var(--header-height);
+}
+
 .site-header {
     overflow: visible;
-    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(46, 16, 101, 0.06);
+    /* Enhanced transition for smooth auto-hide */
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), 
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+    will-change: transform;
+    height: var(--header-height);
 }
 
-/* Hide header when scrolling down, show when scrolling up */
+/* Auto-hide header with improved behavior */
 .site-header.hide-header {
     transform: translateY(-100%);
+    /* Add shadow when hiding to create depth effect */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
 
 .site-header.show-header {
     transform: translateY(0);
+    /* Smooth shadow appearance when showing */
+    box-shadow: 0 2px 24px rgba(46, 16, 101, 0.06);
+}
+
+/* Additional state for when header is at top */
+.site-header.at-top {
+    box-shadow: none;
+    border-bottom-color: transparent;
+}
+
+/* Scrolled state for sticky header */
+.site-header.scrolled {
+    box-shadow: 0 2px 24px rgba(46, 16, 101, 0.08);
+    border-bottom-color: rgba(46, 16, 101, 0.08);
 }
 
 .header-container {
@@ -645,6 +673,11 @@ body {
         --header-height-scrolled: 60px;
     }
 
+    /* Update body padding for larger header */
+    body {
+        padding-top: var(--header-height);
+    }
+
     .section-title {
         font-size: 2rem;
     }
@@ -821,11 +854,7 @@ body {
         background: rgba(255, 255, 255, 0.92);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-    }
-
-    .site-header.scrolled {
-        box-shadow: 0 2px 24px rgba(46, 16, 101, 0.08);
-        border-bottom-color: rgba(46, 16, 101, 0.08);
+        height: var(--header-height);
     }
 
     .card {
@@ -876,6 +905,11 @@ body {
         --container-padding: 32px;
         --header-height: 76px;
         --header-height-scrolled: 64px;
+    }
+
+    /* Update body padding for desktop header */
+    body {
+        padding-top: var(--header-height);
     }
 
     .section-title {
