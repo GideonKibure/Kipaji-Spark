@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate — Kipaji Spark | Coming Soon</title>
+    
+    <!-- Google Fonts: Poppins & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Main Global Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <!-- Page Specific Styles -->
+    <link rel="stylesheet" href="assets/css/pages/donate.css" />
+    
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- BACK TO TOP BUTTON                           -->
+    <!-- ============================================ -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5" />
+            <path d="M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- ============================================ -->
+    <!-- WHATSAPP FLOATING BUTTON                     -->
+    <!-- ============================================ -->
+    <a href="https://wa.me/255697091553?text=Hello%20Kipaji%20Spark%2C%20I'd%20like%20to%20know%20more%20about%20your%20programs" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="whatsapp-float" 
+    id="whatsappFloat" 
+    aria-label="Chat with us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ============================================ -->
+    <!-- HEADER / NAVIGATION (Shared System)           -->
+    <!-- ============================================ -->
+    <header class="site-header" id="site-header">
+        <div class="container header-container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/logo/logo.webp" alt="KIPAJI SPARK Logo" class="logo-icon">
+                    <span class="logo-text">Kipaji <span class="logo-highlight">Spark</span></span>
+                </a>
+            </div>
+
+            <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
+                <button class="nav-close-btn" id="navCloseBtn" aria-label="Close navigation menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6L6 18" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <div class="nav-content">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+                        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                        <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <a href="donate.html" class="btn btn-primary btn-donate active">Donate</a>
+                    </div>
+                </div>
+
+                <div class="nav-social-footer">
+                    <span class="social-label">Follow Us</span>
+                    <div class="nav-social-icons">
+                        <a href="https://www.instagram.com/kipajispark_tz?igsh=MXZ3b2w2d3JpbGo3bg==" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@kipajispark_tz?_r=1&_t=ZS-97y5X1iWm84" target="_blank" rel="noopener noreferrer" aria-label="Follow on TikTok" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.589 6.686a4.093 4.093 0 0 1-3.98-4.436h-2.643v12.077a2.56 2.56 0 0 1-2.557 2.56 2.56 2.56 0 0 1-2.557-2.56 2.56 2.56 0 0 1 2.557-2.56c.272 0 .529.045.775.126V8.947a5.31 5.31 0 0 0-.775-.073 5.31 5.31 0 0 0-5.31 5.31 5.31 5.31 0 0 0 5.31 5.31 5.31 5.31 0 0 0 5.31-5.31V8.547a6.904 6.904 0 0 0 4.03 1.303V6.686c-.011 0-.022 0-.033 0z"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/@kipajispark?si=dhooBKffoszc910C" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+    <main class="donate-page">
+        <!-- ============================================ -->
+        <!-- 1) DONATE PAGE HERO SECTION                   -->
+        <!-- ============================================ -->
+        <section class="page-hero donate-hero">
+            <div class="container">
+                <div class="donate-hero-grid">
+                    <div class="donate-hero-content reveal fade-up">
+                        <span class="section-eyebrow">Coming Soon</span>
+                        <h1 class="section-title">Donation Page <br /><span class="text-highlight">Under Construction</span></h1>
+                        <p class="section-desc">
+                            We're building a secure and seamless donation platform to support our mission 
+                            of discovering, nurturing, and empowering young talents across Tanzania and Africa. 
+                            Your generosity will help us create lasting impact.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="contact.html" class="btn btn-primary btn-large">Contact Us</a>
+                            <a href="index.html" class="btn btn-outline btn-large">Back to Home</a>
+                        </div>
+                    </div>
+                    <div class="donate-hero-image reveal fade-up">
+                        <div class="donate-hero-collage">
+                            <div class="construction-icon-wrapper">
+                                <svg class="construction-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </div>
+                            <div class="deco-shape deco-purple-blob"></div>
+                            <div class="deco-shape deco-yellow-blob"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 2) DONATE INTRO / PROGRESS OVERVIEW           -->
+        <!-- ============================================ -->
+        <section class="donate-intro-section section">
+            <div class="container">
+                <div class="donate-intro-grid">
+                    <div class="donate-intro-content reveal fade-left">
+                        <span class="section-eyebrow">Development Progress</span>
+                        <h2 class="section-title">Building a platform for impact</h2>
+                        <p class="section-desc">
+                            We're creating a secure, user-friendly donation system that will make it easy for 
+                            supporters like you to contribute to our mission. Every donation helps us reach 
+                            more children and youth with transformative programs.
+                        </p>
+                        <div class="progress-section">
+                            <div class="progress-info">
+                                <span class="progress-label">Launch Progress</span>
+                                <span class="progress-percentage">78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%"></div>
+                            </div>
+                            <p class="progress-note">
+                                <i class="fas fa-rocket" style="color: #F4B400; margin-right: 8px;"></i>
+                                We're working hard to launch this page. Thank you for your patience and support!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="donate-intro-sidecard reveal fade-right">
+                        <div class="intro-focus-card">
+                            <h4>What your donation will support</h4>
+                            <ul class="focus-list">
+                                <li>
+                                    <span class="focus-icon"><i class="fas fa-graduation-cap"></i></span>
+                                    <span>Scholarships for talented youth</span>
+                                </li>
+                                <li>
+                                    <span class="focus-icon"><i class="fas fa-music"></i></span>
+                                    <span>Talent and creativity programs</span>
+                                </li>
+                                <li>
+                                    <span class="focus-icon"><i class="fas fa-hands-helping"></i></span>
+                                    <span>Mentorship and life skills training</span>
+                                </li>
+                                <li>
+                                    <span class="focus-icon"><i class="fas fa-users"></i></span>
+                                    <span>Community outreach initiatives</span>
+                                </li>
+                                <li>
+                                    <span class="focus-icon"><i class="fas fa-building"></i></span>
+                                    <span>Sustainable talent development</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 3) DONATE SPOTLIGHTS / WAYS TO GIVE           -->
+        <!-- ============================================ -->
+        <section class="donate-spotlights-section section bg-light">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Ways to Give</span>
+                    <h2 class="section-title">Every contribution makes a difference</h2>
+                    <p class="section-desc" style="max-width: 640px; margin: 0 auto;">
+                        While our donation platform is under construction, here are ways you can already 
+                        support Kipaji Spark and help us nurture young talent.
+                    </p>
+                </div>
+                <div class="donate-spotlights-grid">
+                    <!-- Spotlight 1: Partner With Us -->
+                    <article class="donate-spotlight-card reveal fade-up">
+                        <div class="spotlight-card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="spotlight-card-body">
+                            <h3 class="spotlight-card-title">Partner With Us</h3>
+                            <p class="spotlight-card-text">
+                                Collaborate with Kipaji Spark as an organization, school, or institution to 
+                                bring talent development programs to more communities.
+                            </p>
+                            <a href="contact.html" class="spotlight-card-link">Become a Partner →</a>
+                        </div>
+                    </article>
+
+                    <!-- Spotlight 2: Volunteer Your Time -->
+                    <article class="donate-spotlight-card reveal fade-up">
+                        <div class="spotlight-card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="spotlight-card-body">
+                            <h3 class="spotlight-card-title">Volunteer Your Time</h3>
+                            <p class="spotlight-card-text">
+                                Share your skills, expertise, and passion with young talents. Mentor, coach, 
+                                or assist in workshops and community programs.
+                            </p>
+                            <a href="contact.html" class="spotlight-card-link">Join as Volunteer →</a>
+                        </div>
+                    </article>
+
+                    <!-- Spotlight 3: Sponsor a Program -->
+                    <article class="donate-spotlight-card reveal fade-up">
+                        <div class="spotlight-card-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="spotlight-card-body">
+                            <h3 class="spotlight-card-title">Sponsor a Program</h3>
+                            <p class="spotlight-card-text">
+                                Support specific programs like Arusha Kids, Arusha's Got Talent, or our 
+                                mentorship initiatives to create lasting impact.
+                            </p>
+                            <a href="contact.html" class="spotlight-card-link">Sponsor Now →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 4) DONATE INFO / FEATURES GRID               -->
+        <!-- ============================================ -->
+        <section class="donate-features-section section">
+            <div class="container">
+                <div class="section-header centered reveal fade-up">
+                    <span class="section-eyebrow">Why Support Us</span>
+                    <h2 class="section-title">Your support transforms lives</h2>
+                    <p class="section-desc" style="max-width: 640px; margin: 0 auto;">
+                        When you support Kipaji Spark, you're investing in the future of young talents 
+                        and building stronger communities.
+                    </p>
+                </div>
+                <div class="donate-features-grid">
+                    <!-- Feature 1 -->
+                    <div class="donate-feature-card reveal fade-up">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h4 class="feature-title">Empower Youth</h4>
+                        <p class="feature-desc">
+                            Help young people discover their talents, build confidence, and unlock 
+                            opportunities for a brighter future.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="donate-feature-card reveal fade-up">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="feature-title">Nurture Creativity</h4>
+                        <p class="feature-desc">
+                            Support arts, music, dance, and creative expression that help children 
+                            develop their unique gifts and potential.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="donate-feature-card reveal fade-up">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h4 class="feature-title">Build Community</h4>
+                        <p class="feature-desc">
+                            Create safe spaces where children, families, and mentors come together 
+                            to celebrate talent and growth.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="donate-feature-card reveal fade-up">
+                        <div class="feature-icon-wrapper">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4 class="feature-title">Create Impact</h4>
+                        <p class="feature-desc">
+                            Your contribution helps build a sustainable talent ecosystem that 
+                            reaches thousands of children across Tanzania and Africa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 5) DONATE QUOTE / TESTIMONIAL STRIP          -->
+        <!-- ============================================ -->
+        <section class="donate-quote-strip section bg-light">
+            <div class="container reveal fade-up">
+                <div class="quote-strip-grid">
+                    <div class="quote-strip-item">
+                        <p class="quote-strip-text">“Supporting talent is supporting the future.”</p>
+                    </div>
+                    <div class="quote-strip-item">
+                        <p class="quote-strip-text">“Every child deserves a chance to shine.”</p>
+                    </div>
+                    <div class="quote-strip-item">
+                        <p class="quote-strip-text">“Together we can build a brighter tomorrow.”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- 7) CTA BANNER SECTION (Shared System)         -->
+        <!-- ============================================ -->
+        <section class="cta-banner-section">
+            <div class="container cta-banner-container reveal fade-up">
+                <div class="cta-banner-content">
+                    <h2 class="cta-banner-title">Help us create more moments where young talent can shine</h2>
+                    <p class="cta-banner-desc">
+                        Whether you're a parent, school, mentor, partner, or supporter, you can help bring more inspiring 
+                        experiences and opportunities to children and youth through Kipaji Spark.
+                    </p>
+                    <div class="cta-banner-actions">
+                        <a href="contact.html" class="btn btn-primary btn-large">Get Involved</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-large">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- FOOTER (Shared System, identical to Home)     -->
+    <!-- ============================================ -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-column footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/images/logo/logo.webp" alt="KIPAJI SPARK Logo" class="logo-icon">
+                    <span class="logo-text">Kipaji <span class="logo-highlight">Spark</span></span>
+                </div>
+                <p class="footer-tagline">My talent my wings.</p>
+                <p class="footer-desc">Discovering, nurturing, and empowering children and youth through arts, creativity, and life skills across Tanzania and Africa.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/kipajispark_tz?igsh=MXZ3b2w2d3JpbGo3bg==" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on Instagram" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@kipajispark_tz?_r=1&_t=ZS-97y5X1iWm84" target="_blank" rel="noopener noreferrer" aria-label="Follow KIPAJI SPARK on TikTok" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon">
+                            <path d="M19.589 6.686a4.093 4.093 0 0 1-3.98-4.436h-2.643v12.077a2.56 2.56 0 0 1-2.557 2.56 2.56 2.56 0 0 1-2.557-2.56 2.56 2.56 0 0 1 2.557-2.56c.272 0 .529.045.775.126V8.947a5.31 5.31 0 0 0-.775-.073 5.31 5.31 0 0 0-5.31 5.31 5.31 5.31 0 0 0 5.31 5.31 5.31 5.31 0 0 0 5.31-5.31V8.547a6.904 6.904 0 0 0 4.03 1.303V6.686c-.011 0-.022 0-.033 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://youtube.com/@kipajispark?si=dhooBKffoszc910C" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to KIPAJI SPARK on YouTube" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="social-icon"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="events.html">Upcoming Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">Our Programs</h4>
+                <ul class="footer-links">
+                    <li><a href="programs.html">Arusha Kids</a></li>
+                    <li><a href="programs.html">Arusha's Got Talent</a></li>
+                    <li><a href="programs.html">Talent Training</a></li>
+                    <li><a href="programs.html">Leadership &amp; Life Skills</a></li>
+                    <li><a href="programs.html">Community Outreach</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="footer-heading">Get in Touch</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-icon"><path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" /></svg>
+                        <span>Arusha, Tanzania</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-icon"><path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" /></svg>
+                        <span>+255 123 456 789</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="contact-icon"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" /><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" /></svg>
+                        <span>info@kipajispark.org</span>
+                    </li>
+                </ul>
+                <div class="footer-newsletter">
+                    <label for="newsletter-email">Subscribe for updates</label>
+                    <div class="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="Your email" />
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Kipaji Spark. All rights reserved. My talent my wings.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT                                    -->
+    <!-- ============================================ -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/pages/donate.js"></script>
+</body>
+</html>
